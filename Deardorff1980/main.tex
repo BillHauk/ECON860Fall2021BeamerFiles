@@ -1,0 +1,486 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+%\usepackage[authordate,backend=biber,natbib]{biblatex-chicago}
+%\usepackage{booktabs}
+%\addbibresource{growthreferences.bib}
+
+%\usepackage{utopia} %font utopia imported
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title[Deardorff (1980)] %optional
+{The General Law of Comparative Advantage}
+
+\subtitle{Alan Deardorff, \emph{Journal of Political Economy}, 1980}
+
+\author [Hauk] % (optional)
+{William~R.~Hauk,~Jr.} %\inst{1} %\and J.~Doe\inst{2}} 
+
+\institute[UofSC] % (optional)
+{
+  %\inst{1}%
+  Darla Moore School of Business\\
+  University of South Carolina
+  %\and
+  %\inst{2}%
+  %Faculty of Chemistry\\
+  %Very Famous University
+}
+
+\date[ECON 860, Fall 2021] % (optional)
+{ECON 860 -- International Trade Theory\\Fall 2021}
+
+\logo{\includegraphics[height=1cm]{UofSC_Monogram_Stack_CMYK_G.jpg}}
+
+%End of title page configuration block
+
+%---------------------------------------------------------
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+%------------------------------------------------------------
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+
+%---------------------------------------------------------
+\section{Introduction}
+\begin{frame}{Introduction}
+
+Purpose of the paper:
+
+\begin{itemize}
+    \item<1-> To ``demonstrate, in a general model” the validity of a weak form of the Law of Comparative Advantage, that is, that the pattern of international trade is determined by comparative advantage.” 
+    \item<2-> Early models of trade were based on two-good, two-factor models; later work shows that Law of Comparative Advantage is less obvious in multi-good models, e.g. Jones (1961), Samuelson (1953), Melvin (1968).
+    \item<3-> Deardorff shows that there is a somewhat weaker (but more robust) version of the Law of Comparative Advantage that can deal with these complications – look at correlations between autarky prices and net exports by sector.
+\end{itemize}
+    
+\end{frame}
+
+%---------------------------------------------------------
+
+\begin{frame}{Natural Trade}
+
+\begin{itemize}
+    \item<1-> Travis (1964, 1972) shows that the presence of trade barriers such as tariffs or transportation costs could also disrupt the Law of Comparative Advantage.
+    \item<2-> Deardorff creates the idea of ``natural trade” – trade that may be restricted by tariffs, export taxes, and/or transportation costs – and shows that his results are robust to a natural trade equilibrium
+    \begin{itemize}
+        \item<3-> Free trade is a special case of natural trade. 
+        \item<4-> Natural trade does not allow for (large) export subsidies.  (I would also argue no dumping or international price discrimination.)
+        \item<5-> Basic idea is that an exported good must be weakly more expensive for overseas consumers than for domestic consumers.
+    \end{itemize}
+\end{itemize}
+    
+\end{frame}
+
+%---------------------------------------------------------
+
+\section{The Model}
+\begin{frame}{Model Set-Up 1}
+
+\begin{itemize}
+    \item<1-> Assume $ m $ countries $ i=1,...,m $  and $ n $ goods, $ j=1,...,n $.  Goods here can be final goods, intermediate goods, and primary factors of production.
+    \item<2-> Let $ Q^i $ be an $ n $ unit net vector of goods supplied by country $ i $ to its domestic consumers, and $ T^i $ be an $ n $ unit net vector of goods supplied to the world market by country $ i $.
+    \begin{itemize}
+        \item<3-> If $ Q_{j}^{i} > 0 $ then there are units of good $ j $ available for consumption by domestic consumers, if $ Q_{j}^{i} < 0 $, then there is a net use of intermediate good or primary factor $ j $ in the country.
+        \item<4-> Similarly, if $ T_{j}^{i} > 0 $, then the country is a net exporter of good $ j $, and a net importer of good $ j $ if $ T_{j}^{i} < 0 $. 
+    \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%---------------------------------------------------------
+
+\begin{frame}{Model Set-Up 2}
+
+\begin{itemize}
+    \item<1-> Define $ F^{i} $ as the production possibility set with all combinations of $ Q ^{i} $ and $ T^{i} $ that are feasible given the country’s technology and factor endowments.
+    \item<2-> Also assume that transport costs are non-negative in the following sense: if
+    \begin{equation}
+        \left( Q^{i}, T^{i} \right) \in F^{i}
+        \label{eq:autarkyfeasibility1}
+    \end{equation}
+    then
+    \begin{equation}
+        \left( Q^{i} + T^{i}, 0 \right) \in F^{i}
+        \label{eq:autarkyfeasibility2}
+    \end{equation}
+    \item<3-> In words -- if it is possible to consume $ Q^i $ and export $ T^i $, then it is possible to consume $ Q^{i} + T^{i} $ at home under autarky.
+\end{itemize}
+
+\end{frame}
+
+%---------------------------------------------------------
+
+\begin{frame}{Autarky Equilibrium}
+
+\begin{itemize}
+    \item<1-> Start by characterizing the autarky (i.e. non-trade) equilibrium in country $ i $.
+    \item<2-> By definition $ T^{i} = 0 $ .  Define $ p^{a^{i}} $ as the vector of prices that prevail in the autarky equilibrium for country $ i $.
+    \item<3-> We assume that the autarky equilibrium is feasible, maximal, and preferred.  That is:
+    \begin{gather}
+        \left( Q^{a^{i}}, 0 \right) \in F^{i} \label{eq:autarkyfeasible} \\
+        p^{a^{i}} Q^{a^{i}} \ge p^{a^{i}} Q \text{ for all } \left( Q, 0 \right) \in F^{i} \label{eq:autarkyGDPmax} \\
+        U^{i}\left( Q^{a^{i}} \right) \ge U^{i}\left( Q \right) \text{ for all } Q \text{ such that } p^{a^{i}} Q \le p^{a^{i}} Q^{a^{i}} \label{eq:autarkyutilpreferred}
+    \end{gather}
+\end{itemize}
+    
+\end{frame}
+
+%-----------------------------------------------------------
+
+\begin{frame}{Natural Trade Equilibrium}
+
+\begin{itemize}
+    \item<1-> Let $ Q^{n^{i}} $ and $ T^{n^{i}} $ be the domestic net supply and net trade vectors for country $ i $  in a natural trade equilibrium.
+    \item<2-> Let $ p^{q^{i}} $ and $ p^{t^{i}} $ be the corresponding domestic price vectors for domestic consumption and the price received by traders at country $ i $’s international ports (inclusive of tariffs for imports and net of export taxes for exports).
+    \item<3-> We can similarly define the natural trade equilibrium as being feasible, maximal, and preferred at the natural trade prices:
+    \begin{gather}
+        \left( Q^{n^{i}}, T^{n^{i}} \right) \in F^{i} \label{eq:nattradefeasible} \\
+        p^{q^{i}} Q^{n^{i}} + p^{t^{i}} T^{n^{i}} \ge p^{q^{i}} Q + p^{t^{i}} T \text{ for all } \left( Q, T \right) \in F^{i} \label{eq:nattradeGDPmax} \\
+        U^{i}\left( Q^{n^{i}} \right) \ge U^{i}\left( Q \right) \text{ for all } Q \text{ such that } p^{q^{i}} Q \le p^{q^{i}} Q^{n^{i}} \label{eq:nattradeutilpreferred}
+    \end{gather}
+\end{itemize}
+    
+\end{frame}
+
+%-----------------------------------------------------------
+
+\begin{frame}{World Prices}
+
+\begin{itemize}
+    \item<1-> Assume a vector of world prices $ p^{w} $ relative to an international numeraire good representing the prices at which international exchanges take place.  It may differ from the traders’ prices due to tariffs, export taxes, or transportation costs.
+    \item<2-> Each country’s trade is balanced at these world prices, such that:
+    \begin{equation}
+        p^{w} T^{n^{i}} = 0
+        \label{eq:balancedtrade}
+    \end{equation}
+    for all countries $ i $.
+    \item<3-> Finally, assume that the world market for each good clears, such that:
+    \begin{equation}
+        \sum_{i=1}^{m} T^{n^{i}} = 0
+        \label{eq:worldmarketsclear}
+    \end{equation}
+\end{itemize}
+    
+\end{frame}
+
+%-----------------------------------------------------------
+
+\begin{frame}{Robustness}
+
+This model has \emph{not} made some assumptions typically made in international trade models:
+\begin{itemize}
+    \item<1-> Neither utility functions nor boundaries of production possibility sets are assumed to be differentiable.
+    \item<2-> Utility functions are not assumed to be homothetic (preferences don’t change with income), or in any way identical across countries.
+    \item<3-> Other than the feasible production sets, nothing has been assumed about factor endowments or technology.
+    \item<4-> ``Natural trade" does not assume free trade, and allows for the possibility of non-traded goods.  We need only assume that the world price is weakly higher than the domestic traders’ prices for each good, that is:
+    \begin{equation}
+        \left( p_{j}^{w} - p_{j}^{t^{i}} \right) T_{j}^{n^{i}} \ge 0 \text{ for each good } j = 1,...,n
+        \label{eq:naturaltradedef}
+    \end{equation}
+\end{itemize}
+    
+\end{frame}
+
+%-----------------------------------------------------------
+
+\section{Two Theorems}
+
+%-----------------------------------------------------------
+
+\subsection{The ``Big" Theorem}
+
+%------------------------------------------------------------
+
+\begin{frame}{The ``Big" Theorem}
+    \begin{itemize}
+        \item<1-> Start by deriving a theorem that shows that the value of what a country imports is greater than the value of what it exports evaluated at autarky prices.
+        \item<2-> More formally, the vector of autarky prices $ p^{a^{i}} $ forms a “supporting hyperplane” for the set of all possible trades.
+        \item<3-> If prices and quantities in autarky and trade satisfy assumptions (\ref{eq:autarkyfeasibility1}) - (\ref{eq:naturaltradedef}) for a particular country $ i $, then:
+        \begin{equation}
+            p^{a^{i}} T^{n^{i}} \le 0
+            \label{eq:theorem1result}
+        \end{equation}
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------------------
+
+\begin{frame}{Big Theorem Proof Step 1}
+
+    \begin{itemize}
+        \item<1->  Start by adding up the inequalities in (\ref{eq:naturaltradedef}) to derive:
+        \begin{equation}
+            p^{w} T^{n} - p^{t} T^{n} \ge 0
+            \label{eq:naturaltradevector}
+        \end{equation}
+        to which we can add the balanced trade assumption from (\ref{eq:balancedtrade}) to get:
+        \begin{equation}
+            p^{t} T^{n} \le p^{w} T^{n} = 0
+            \label{eq:tradelessthanzero}
+        \end{equation}
+        \item<2-> Using the GDP maximizing assumption of (\ref{eq:nattradeGDPmax}) and (\ref{eq:tradelessthanzero}), we get:
+        \begin{equation*}
+            p^{q} Q^{a} \le p^{q} Q^{n} + p^{t} T^{n} \le p^{q} Q^{n}
+        \end{equation*}
+        which, combined with (\ref{eq:nattradeutilpreferred}) gives us:
+        \begin{equation*}
+            U\left( Q^{n} \right) \ge U\left( Q^{a} \right)
+        \end{equation*}
+    \end{itemize}
+    
+\end{frame}
+
+%------------------------------------------------------------
+
+\begin{frame}{Big Theorem Proof Step 2}
+
+\begin{itemize}
+    \item<1-> So, the natural trade equilibrium gives us at least as much utility as the autarky equilibrium.  Because of equations (\ref{eq:autarkyfeasibility2}) and (\ref{eq:autarkyutilpreferred}), we can derive:
+    \begin{equation}
+        p^{a} Q^{n} \ge p^{a} Q^{a}
+        \label{eq:autarkypricesconsumption}
+    \end{equation}
+    (If this were not the case, then there would be a vector $ \widetilde{Q} $ in the neighborhood of $ Q^n $ that would cost less at autarky prices than $ Q^a $, but be strictly preferred, violating equation (\ref{eq:autarkyutilpreferred}).)
+    \item<2-> Because (\ref{eq:nattradefeasible}) and (\ref{eq:autarkyfeasibility1}) imply that $ \left( Q^{n} + T^{n}, 0 \right) \in F $, then (\ref{eq:autarkyGDPmax}) implies that at autarky prices:
+    \begin{equation}
+        p^{a} Q^{a} \ge p^{a} \left( Q^{n} + T^{n} \right)
+        \label{eq:autarkypricesinequality}
+    \end{equation}
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Big Theorem Proof Step 3}
+
+\begin{itemize}
+    \item Finally, rearranging (\ref{eq:autarkypricesinequality}) and applying (\ref{eq:autarkypricesconsumption}) gives us:
+    \begin{equation}
+        p^{a} T^{n} \le p^{a} Q^{a} - p^{a} Q^{n} \le 0
+    \end{equation}
+    Q.E.D. $\blacksquare$
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------
+
+\subsection{The ``Small" Theorem}
+
+%--------------------------------------------------------------
+
+\begin{frame}{The ``Small" Theorem}
+
+\begin{itemize}
+    \item<1-> All of the subsequent results rely on the inner-product result from (\ref{eq:theorem1result}).  But that is not the same as a correlation.
+    \item<2-> So, let’s show that the sign of the correlation between two variables is the same as the sign of the inner-product of those two variables if at least one of the variables has an average of zero.
+    \item<3-> By definition, the correlation of two variables $ x^1 $ and $ x^2 $ is:
+    \begin{equation}
+        cor \left( x^{1}, x^{2} \right) = \frac{cov \left( x^{1}, x^{2} \right)}{\sqrt{var\left( x^{1} \right) var\left( x^{2} \right)}}
+        \label{eq:correlationdef}
+    \end{equation}
+    where
+    \small{
+    \begin{align*}
+        cov \left( x^{1}, x^{2} \right) &= \sum_{j=1}^{n} \left( x_{j}^{1} - \overline{x}^{1} \right) \left( x_{j}^{2} - \overline{x}^{2} \right) \\
+        var\left( x^{i} \right) &= \sum_{j=1}^{n} \left( x_{j}^{i} - \overline{x}^{i} \right)^{2}
+    \end{align*}
+    }
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------
+
+\begin{frame}{The Small Theorem Proof}
+
+\begin{itemize}
+    \item<1-> Because the denominator of (\ref{eq:correlationdef}) is non-negative (and strictly positive if the correlation is defined), then the correlation and covariance must have the same sign.
+    \item<2-> The covariance can be rewritten as:
+    \begin{equation*}
+        cov\left( x^{1}, x^{2} \right) = x^{1} x^{2} - n \overline{x}^{1} \overline{x}^{2}
+    \end{equation*}
+    \item<3-> Clearly, if the mean of either $ x^1 $ or $ x^2 $ is zero, then the covariance is equal to the inner product of the two variables.  Because the correlation has the same sign as the covariance, then the correlation has the same sign as the inner product.  Q.E.D. $\blacksquare$
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------
+
+\section{Corollaries}
+
+%--------------------------------------------------------------
+
+\subsection{First Corollary}
+
+%--------------------------------------------------------------
+
+\begin{frame}{The First Corollary}
+
+\begin{itemize}
+    \item<1-> Our first corollary shows that there is a negative correlation between the ratio of the autarky prices in a country and the world prices and a country’s net exports by sector.
+    \item<2-> More formally, define $ \rho $ as the vector of ratios of autarky prices to the world prices that prevail with trade so that:
+    \begin{equation*}
+        \rho_{j} = p_{j}^{a} / p_{j}^{w} \text{ for } j = 1,...,n
+    \end{equation*}
+    and define $ e $ as the vector of the country’s net exports, valued at world prices:
+    \begin{equation*}
+        e_{j} = p_{j}^{w} T_{j}^{n} \text{ for } j = 1,...,n
+    \end{equation*}
+    \item<3-> If our above assumptions are satisfied, then we can show that $ cor \left( \rho, e \right) \le 0 $.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------
+
+\begin{frame}{First Corollary Proof}
+
+\begin{itemize}
+    \item<1-> Using the balanced trade assumption from (\ref{eq:balancedtrade}):
+    \begin{equation*}
+        \sum_{j=1}^{n} e_{j} = p^{w} T^{n} = 0
+    \end{equation*}
+    so, we can use the little theorem and only look at the inner product between $ \rho $ and $ e $ to determine the sign of the correlation.
+    \item<2-> So:
+    \begin{equation*}
+        \rho e = \sum_{j=1}^{n} \frac{p_{j}^{a}}{p_{j}^{w}} p_{j}^{w} T_{j}^{n} = \sum_{j=1}^{n} p_{j}^{a} T_{j}^{n} = p^{a} T^{n}
+    \end{equation*}
+    \item<3-> And we know that $ p^{a} T^{n} \le 0 $ from the big theorem.  So $ \rho e \le 0 $ as well, and $ cor \left( \rho, e \right) \le 0 $.  Q.E.D.$\blacksquare$
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------
+
+\subsection{Second Corollary}
+
+%--------------------------------------------------------------
+
+\begin{frame}{Second Corollary}
+
+\begin{itemize}
+    \item<1-> The first corollary used the ratio of autarky prices to the world prices.  We can derive a similar result for the difference between the autarky prices and the world prices.
+    \item<2-> More formally, if our assumptions from above are satisfied, then we can show that:
+    \begin{equation*}
+        cor \left( p^{a} - p^{w}, T^{n} \right) \le 0
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------
+
+\begin{frame}{Second Corollary Proof}
+
+\begin{itemize}
+    \item<1-> We can calculate the inner product (which, again, is all that is necessary) of the above expression as:
+    \begin{equation*}
+        \left( p^{a} - p^{w} \right) T^{n} = p^{a} T^{n} - p^{w} T^{n}
+    \end{equation*}
+    \item<2-> However, using the balanced trade assumption (\ref{eq:balancedtrade}), then we know that:
+    \begin{equation*}
+        p^{a} T^{n} - p^{w} T^{n} = p^{a} T^{n}
+    \end{equation*}
+    which we know from the big theorem is weakly negative.  Therefore, the correlation is weakly negative.  Q.E.D.$\blacksquare$
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------
+
+\subsection{Third Corollary}
+
+%--------------------------------------------------------------
+
+\begin{frame}{Third Corollary}
+
+\begin{itemize}
+    \item<1-> The first two corollaries look at one country in isolation, and don’t give us much intuition about where the “world” price comes from.  We also have never used the assumption (\ref{eq:worldmarketsclear}) about world markets clearing.  Let’s derive a corollary using trade between two countries.
+    \item<2-> If the world contains two countries, $ i = 1, 2 $, both of which satisfy our above assumptions and the assumption that world markets clear (\ref{eq:worldmarketsclear}), then we can show that:
+    \begin{equation*}
+        cor\left( p^{a^{1}} - p^{a^{2}}, T^{n^{1}} \right) \le 0
+    \end{equation*}
+    that is, the correlation between the difference between the autarky prices of countries $ 1 $ and $ 2 $ and the net exports of country $ 1 $ will be non-positive.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------
+
+\begin{frame}{Third Corollary Proof}
+
+\begin{itemize}
+    \item<1-> If there are two countries, and world markets clear, then:
+    \begin{equation*}
+        T^{n^{1}} = - T^{n^{2}}
+    \end{equation*}
+    \item<2-> So, once again using the idea that we only need to look at the sign of the inner product to determine the sign of the correlation:
+    \begin{equation*}
+        \left( p^{a^{1}} - p^{a^{2}}\right) T^{n^{1}} = p^{a^{1}} T^{n^{1}} + p^{a^{2}} T^{n^{2}} \le 0 
+    \end{equation*}
+    which we know is non-positive by the big theorem.  Q.E.D.$ \blacksquare $
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------
+
+\subsection{Fourth Corollary}
+
+%--------------------------------------------------------------
+
+\begin{frame}{Fourth Corollary}
+
+\begin{itemize}
+    \item<1-> The real world has many countries, so let us derive one last corollary for a many country world.
+    \item<2-> Let $ P^a $ be a vector of length $ mn $ containing the autarky prices of all countries and industries.  Similarly, let $ E $ be a vector of length $ mn $ containing the net exports of all countries and industries.
+    \item<3-> If the world contains $ m $ countries, and all of our assumptions, including world markets clearing, are satisfied, then we can show that:
+    \begin{equation*}
+        cor\left( P^{a}, E \right) \le 0
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------
+
+\begin{frame}{Fourth Corollary Proof}
+
+\begin{itemize}
+    \item<1-> By construction, we can show for $ E $ that:
+    \begin{equation*}
+        \sum_{k=1}^{mn}{E_{k}} = \sum_{j=1}^{n}{\left( \sum_{i=1}^{m}{T_{j}^{n^{i}}} \right)} = 0
+    \end{equation*}
+    using assumption (\ref{eq:worldmarketsclear}).
+    \item<2-> This result means that we can use the small theorem and just look at the inner product of $ P^a $ and $ E $.  Therefore:
+    \begin{equation*}
+        P^{a} E = \sum_{k=1}^{mn}{P^{a} E_{k}} = \sum_{i=1}^{m}{\left( \sum_{j=1}^{n}{p_{j}^{a^{i}} T_{j}^{n^{i}}} \right)} = \sum_{i=1}^{m}{p^{a^{i}} T^{n^{i}}} \le 0
+    \end{equation*}
+    where the last inequality comes from the big theorem.  Q.E.D.$ \blacksquare $
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------
+
+\section{Refinements}
+
+%--------------------------------------------------------------
+
+\end{document}
