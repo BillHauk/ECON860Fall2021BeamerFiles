@@ -1,0 +1,504 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+%\usepackage[authordate,backend=biber,natbib]{biblatex-chicago}
+%\usepackage{booktabs}
+%\addbibresource{growthreferences.bib}
+
+%\usepackage{utopia} %font utopia imported
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title[Melitz (2003)] %optional
+{The Impact of Trade on Intra-Industry Reallocations and Aggregate Industry Productivity}
+
+\subtitle{Marc Melitz, \emph{Econometrica}, 2003}
+
+\author [Hauk] % (optional)
+{William~R.~Hauk,~Jr.} %\inst{1} %\and J.~Doe\inst{2}} 
+
+\institute[UofSC] % (optional)
+{
+  %\inst{1}%
+  Darla Moore School of Business\\
+  University of South Carolina
+  %\and
+  %\inst{2}%
+  %Faculty of Chemistry\\
+  %Very Famous University
+}
+
+\date[ECON 860, Fall 2021] % (optional)
+{ECON 860 -- International Trade Theory\\Fall 2021}
+
+\logo{\includegraphics[height=1cm]{UofSC_Monogram_Stack_CMYK_G.jpg}}
+
+%End of title page configuration block
+
+%---------------------------------------------------------
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+%------------------------------------------------------------
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+
+%-------------------------------------------------------------
+
+\section{Introduction}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Introduction}
+
+\begin{itemize}
+    \item<1-> Paper inspired by a spate of empirical literature showing that there is a large range of productivity differences among different establishments in the same industries.
+    \item<2-> Stylized fact exists that more productive firms are more likely to export – even within ``export sectors” of an economy.
+    \item<3-> Purpose of paper is to develop a dynamic model of an industry with heterogeneous firms to analyze the role of international trade in reallocating factors within an industry.
+    \item<4-> Punchline is that model is consistent with observations that exposure to international trade.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Existing Literature -- Empirical}
+
+Empirical work supporting these stylized facts:
+
+\begin{itemize}
+    \item<1-> Bernard and Jensen (1999a); Aw, Chung, and Roberts (2000); Clerides, Lack, and Tybout (1998) all find that most productive firms self-select into export markets.
+    \item<2-> Aw, Chung, and Roberts (2000); Pavcnik (2002) find that trade tends to reallocate resources from least productive firms to most productive firms.
+    \item<3-> Bernard and Jensen (1999b) find that within-sector reallocations to more productive exporting plants account for 20\% of U.S. manufacturing productivity growth.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Existing Literature -- Theory}
+
+Model builds upon existing monopolistic competition and trade model of Krugman (1979).
+
+\begin{itemize}
+    \item<1-> Adds Hopenhayn’s (1992a, 1992b) model of heterogeneous firm selection in an industry – firms decide whether to enter a market when they are uncertain of their initial and future productivity.
+    \item<2-> Adds insights from Bernard, Eaton, Jensen, and Kortum (2000) model of firm-specific comparative advantage.  But that paper holds the range of products produced exogenous.  This paper makes the range produced endogenous.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\section{Setup of the Model}
+
+\subsection{Demand}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Consumer Preferences}
+
+\begin{itemize}
+    \item<1-> Preferences of representative consumer are given by a C.E.S. utility function over a continuum of goods indexed by $ \omega $:
+    \begin{equation*}
+        U = \left[ \int_{\omega \in \Omega} {q\left( \omega \right)^{\rho} d\omega} \right]^{1/\rho}
+    \end{equation*}
+    where $ 0 < \rho < 1 $, which implies that the elasticity of substitution between any two goods is $ \sigma = \frac{1}{1 - \rho} > 1 $.
+    \item<2-> Dixit and Stiglitz (1977) show that the set of varieties $ \Omega $  can be considered as an aggregate good $ Q = U $ associated with an aggregate price:
+    \begin{equation*}
+        P = \left[ \int_{\omega \in \Omega} {p\left( \omega \right)^{1 - \sigma} d\omega} \right]^{\frac{1}{1 - \sigma}}
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Consumption and Expenditure Functions}
+
+The optimal consumption and expenditure decisions for individual varieties is:
+\begin{equation}
+    \begin{split}
+        q\left( \omega \right) &= Q\left[ \frac{p\left( \omega \right)}{P} \right]^{-\sigma} \\
+        r\left( \omega \right) &= R\left[ \frac{p\left( \omega \right)}{P} \right]^{1 - \sigma}
+    \end{split}
+    \label{eq:quantityandexpenditure}
+\end{equation}
+where $ R = PQ = \int{\omega \in \Omega} r\left( \omega \right) d\omega $ represents aggregate expenditure.
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\subsection{Production}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Production Costs}
+
+\begin{itemize}
+    \item<1-> Each firm produces one variety $ \omega $ using one factor of production, labor, which is inelastically supplied at level $ L $.
+    \item<2-> Labor is linearly related to the production of each variety using the function $ l = f + \frac{q}{\phi} $.  All firms have the same fixed cost $ f $, but they have different productivity levels indexed by $ \phi > 0 $. 
+    \item<3-> With a C.E.S. utility function, the optimal markup over marginal cost is $ \frac{\sigma}{1 - \sigma} = \frac{1}{\rho} $, so the optimal price for variety $ \phi $ is:
+    \begin{equation}
+        p\left( \phi \right) = \frac{w}{\rho \phi}
+        \label{eq:optimalprice}
+    \end{equation}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Firm Profit}
+
+\begin{itemize}
+    \item<1-> Firm profit is: CHECK THIS
+    \begin{equation}
+        \pi\left( \phi \right) = r\left( \phi \right) - l\left( \phi \right) = \frac{r\left( \phi \right)}{\sigma} - f
+        \label{eq:profit1}
+    \end{equation}
+    where $ r\left( \phi \right) $ is firm revenue, which is a function of $ \phi $.
+    \item<2-> Combining (\ref{eq:quantityandexpenditure}) and (\ref{eq:optimalprice}), we get:
+    \begin{equation*}
+        r\left( \phi \right) = R\left( P \rho \phi \right)^{\sigma - 1}
+    \end{equation*}
+    and plugging into (\ref{eq:profit1}), we get:
+    \begin{equation*}
+        \pi\left( \phi \right) = \frac{R}{\sigma}\left( P \rho \phi \right)^{\sigma - 1} - f
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Comparing Firms}
+
+\begin{itemize}
+    \item<1-> If we compare any two firms’ outputs and revenues, we get:
+    \begin{equation*}
+        \frac{q\left( \phi_{1} \right)}{q\left( \phi_{2} \right)} = \left( \frac{\phi_{1}}{\phi_{2}} \right)^{\sigma}
+    \end{equation*}
+    and
+    \begin{equation}
+        \frac{r\left( \phi_{1} \right)}{r\left( \phi_{2} \right)} = \left( \frac{\phi_{1}}{\phi_{2}} \right)^{\sigma - 1}
+        \label{eq:relativerevenue}
+    \end{equation}
+    \item<2-> So, a more productive firm will have higher output, higher revenues, and lower price, and earn higher profits than firms with lower productivity.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\subsection{Equilibrium Characterization}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Equilibrium Characterization}
+
+\begin{itemize}
+    \item<1-> An equilibrium is characterized by a mass of firms $ M $ and a distribution of productivity levels $ \mu\left( \phi \right) $.  The aggregate price level $ P $ is then:
+    \begin{equation*}
+        P = \left[ \int_{0}^{\infty} p\left( \phi \right)^{1 - \sigma} M \mu\left( \phi \right) d\phi \right]^{\frac{1}{1 - \sigma}}
+    \end{equation*}
+    \item<2-> Using the pricing rule from (\ref{eq:optimalprice}), this can be written as:
+    \begin{equation*}
+        P = M^{\frac{1}{1 - \sigma}} p\left( \tilde{\phi} \right)
+    \end{equation*}
+    where:
+    \begin{equation*}
+        \tilde{\phi} = \left[ \int_{0}^{\infty} \phi^{\sigma - 1} \mu\left( \phi \right) d\phi \right]^{\frac{1}{\sigma - 1}}
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Equilibrium Characterization}
+
+\begin{itemize}
+    \item<1-> It is shown in the Appendix that $ \tilde{\phi} $ is a sufficient statistic to summarize the distribution $ \mu\left( \phi \right)$.
+    \item<2-> The aggregate variables can be derived as:
+    \begin{equation*}
+        \begin{split}
+           P &= M^{\frac{1}{1 - \sigma}} p\left( \tilde{\phi} \right) \\
+           R = PQ &= M r\left( \tilde{\phi} \right) \\
+           Q &= M^{\frac{1}{\rho}} q\left( \tilde{\phi} \right) \\
+           \Pi &= M \pi \left( \tilde{\phi} \right)
+        \end{split}
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\section{Firm Entry and Exit}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Productivity Draws}
+
+\begin{itemize}
+    \item<1-> Prior to entry, firms are identical.  To enter a market, firms must make a fixed investment $ f_{e} > 0 $, which is treated as a sunk cost once incurred.  Once firms enter the market, they received a productivity level $ \phi $ drawn from a common density function $ g\left( \phi \right) $, which has a cumulative distribution $ G\left( \phi \right) $.
+    \item<2-> Once a firm knows its productivity level, it can decide to produce or not produce.  If it does produce, it will face a probability $ \delta $ in every period that it will suffer a shock that causes it to exit the market.
+    \item<3-> If there is no time discounting, then each firm’s value function is:
+    \begin{equation*}
+        v\left( \phi \right) = \max\left\{ 0, \sum_{t = 1}^{\infty }{\left( 1 - \delta \right)^{t}} \pi\left( \phi \right)\right\} = \max\left\{ 0, \frac{1}{\delta} \pi\left( \phi \right) \right\}
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Firm Exit and Productivity}
+
+\begin{itemize}
+    \item<1-> Define $ \phi^{*} $ as the lowest productivity level for firms that are producing.  Because $ \pi\left( 0 \right) = - f_{e} $, then $ \pi\left( \phi^{*} \right) = 0 $.
+    \item<2-> Since subsequent firm exit is random, $ \mu\left( \phi \right) $ can be defined as the subset of $ g\left( \phi \right) $ that is above $ \phi^{*} $:
+    \begin{equation*}
+        \mu\left( \phi \right) = \left\{ \begin{matrix}
+           \frac{g\left( \phi \right)}{1 - G\left( \phi^{*} \right)} \text{ if } \phi > \phi^{*} \\
+           0 \text{ otherwise}
+        \end{matrix} \right\}
+    \end{equation*}
+    \item<3-> So, aggregate productivity is the expected value of $ \phi $ conditional on being greater than $ \phi^{*} $:
+    \begin{equation*}
+        \tilde{\phi}\left( \phi^{*} \right) = \left[ \frac{1}{1 - G\left( \phi^{*} \right)} \int_{\phi^{*}}^{\infty } \phi^{\sigma - 1} g\left( \phi \right) d\phi \right]^{\frac{1}{\sigma - 1}}
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\subsection{Zero Profit Cutoff Condition}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Zero Profit Cutoff Condition}
+
+\begin{itemize}
+    \item<1-> Since the average productivity level is determined by $ \phi^{*} $, the average revenue and profit levels are as well.  Using equation (\ref{eq:relativerevenue}), we can derive:
+    \begin{equation*}
+        \tilde{r} = r\left( \tilde{\phi} \right) = \left( \frac{\tilde{\phi}\left( \phi^{*} \right)}{\phi^{*}} \right)^{\sigma - 1} r\left( \phi^{*} \right)
+    \end{equation*}
+    \item<2-> Which, combined with (\ref{eq:profit1}), implies an average profit of:
+    \begin{equation*}
+        \tilde{\pi} = \pi\left( \tilde{\phi} \right) = \left( \frac{\tilde{\phi}\left( \phi^{*} \right)}{\phi^{*}} \right)^{\sigma - 1} \frac{r\left( \phi^{*} \right)}{\sigma} - f_{e}
+    \end{equation*}
+    \item<3-> Because we have a zero-profit condition at $ \pi\left( \phi^{*} \right) = 0 $, then we can combine the above equations to derive:
+    \begin{equation}
+        \pi\left( \phi^{*} \right) = 0 \Leftrightarrow r\left( \phi^{*} \right) = \sigma f_{e} \Leftrightarrow \tilde{\pi} = f_{e} k\left( \phi^{*} \right)
+        \label{eq:zerocutoffcondition}
+    \end{equation}
+    where $ k\left( \phi^{*} \right) = \left( \frac{\tilde{\phi}\left( \phi^{*} \right)}{\phi^{*}} \right)^{\sigma - 1} - 1 $.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\subsection{Free Entry and the Value of Firms}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Free Entry and the Value of Firms}
+
+\begin{itemize}
+    \item<1-> All incumbent firms, except for the zero-profit cutoff firm, earn positive profits – indeed, the expectation of earning profits is the reason that they invest in the fixed cost of entry $ f_{e} $.  Let $ \tilde{v} = \frac{\tilde{\pi}}{\delta} $ be the present discounted value of average profit flows conditional on successful entry.  We can derive the expected value of entry as:
+    \begin{equation*}
+        v_{e} = \frac{1 - G\left( \phi^{*} \right)}{\delta} \tilde{\pi} - f_{e}
+    \end{equation*}
+    \item<2-> In equilibrium, this value cannot be negative, or firms would not want to enter.  It also cannot be positive if there is free entry.  Therefore, the free entry condition implies that $ v_{e} = 0 $, or:
+    \begin{equation}
+        \tilde{\pi} = \frac{\delta}{1 - G\left( \phi^{*} \right)} f_{e}
+        \label{eq:freeentrycondition}
+    \end{equation}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\section{Equilibrium in a Closed Economy}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Closed Economy Equilibrium}
+
+\begin{itemize}
+    \item<1-> Equations (\ref{eq:zerocutoffcondition}) and (\ref{eq:freeentrycondition}) give us two equations that depend on $ \tilde{\pi} $ and $ \phi^{*} $:
+    \begin{equation*}
+        \begin{split}
+             \tilde{\pi} &= \left[ \left( \frac{\tilde{\phi}\left( \phi^{*} \right)}{\phi^{*}} \right)^{\sigma - 1} - 1 \right] f_{e} \\
+             \tilde{\pi} &= \frac{\delta}{1 - G\left( \phi^{*} \right)} f_{e}
+        \end{split}
+    \end{equation*}
+    \item<2-> For the first equation, $ \frac{\tilde{\phi}\left( \phi^{*} \right)}{\phi^{*}} $ goes from $ \infty $  to $ 1 $ (and $ \tilde{\pi} $ goes from $ \infty $  to $ 0 $) as $ \phi^{*} $ goes from $ 0 $ to $ \infty $.
+    \item<3-> For the second equation, $ G\left( \phi^{*} \right) $ goes from $ 0 $ to $ 1 $ (and $ \tilde{\pi} $ goes from $ \delta f_{e} $ to $ \infty $) as $ \phi^{*} $ goes from $ 0 $ to $ \infty $. 
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Figure 1}
+
+These two curves must cross once, and we get Figure 1:
+
+\begin{figure}
+    \centering
+    \includegraphics{MelitzFig1.jpg}
+    \label{fig:Fig1}
+\end{figure}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Stationary Equilibrium}
+
+\begin{itemize}
+    \item<1-> To have a stationary equilibrium, the number of successful new entrants must equal the number of firms that are kicked out of the market $ p_{in} M_{e} = \delta M $.
+    \item<2->  Some of our labor supply must be used for investment on the part of the firms entering the market, so labor market clearing requires that $ L = L_{p} + L_{e} $ where $ L_{p} $ is the number of workers in production, and $ L_{e} $ is the number of workers used in investment by firms entering.
+    \item<3->  Payments to production workers must equal the difference between revenue and profits: $ L_{p} = R - \Pi $.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Number of Firms in Equilibrium}
+
+\begin{itemize}
+    \item<1-> Using this market clearing condition and the free entry condition, $ L_{e} $ can be written as:
+    \begin{equation*}
+        L_{e} = M_{e} f_{e} = \frac{\delta M}{P_{in}} f_{e} = M \tilde{\pi} = \Pi
+    \end{equation*}
+    so aggregate revenue must equal total payments to labor.
+    \item<2-> The mass of producing firms in any period can be determined from the average profit level:
+    \begin{equation*}
+        M = \frac{R}{\tilde{r}} = \frac{L}{\sigma\left( \tilde{\pi} + f_{e} \right)}
+    \end{equation*}
+    \item<3-> Knowing the mass of firms $ M $, in turn, pins down the equilibrium price index:
+    \begin{equation*}
+        P = M^{\frac{1}{1 - \sigma}} p\left( \phi \right) = \frac{M^{\frac{1}{1 - \sigma}}}{\rho \tilde{\phi}}
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Analysis of the Equilibrium}
+
+\begin{itemize}
+    \item<1-> All of the firm-level variables are independent of the country size $ L $.  Welfare per worker is given by:
+    \begin{equation*}
+        W = P^{-1} = M^{\frac{1}{1 - \sigma}} \rho \tilde{\phi}
+    \end{equation*}
+    which increases in $ M $ solely due to increased product variety.  (This is the result from Krugman (1980).)
+    \item<2->  While the results of this section are identical to a model where $ \phi $ is exogenously given for all firms, the heterogeneous nature of the firms will be important when the country is exposed to trade, which induces reallocations of labor across firms.  
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\section{Overview and Assumptions of the Open Economy Model}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Assumptions of the Open Economy Model}
+
+\begin{itemize}
+    \item<1->  In the absence of any costs to trade, the combined market can be represented as an integrated economy, with a greater variety of goods for consumers, like Krugman (1979, 1980).
+    \item<2->  Melitz assumes (in line with evidence, Roberts and Tybout (1977)) that exporting firms face, not only marginal costs to trade, but also fixed costs.
+    \item<3-> Firms make export decisions \emph{after} they know about their own productivity level (unlike original market entry decision).
+    \item<4-> Per-unit trade costs (which could include tariffs or export taxes) are modeled in an “iceberg” fashion – $ \tau > 1 $ units of a good must be shipped in order for $ 1 $ to arrive.
+    \item<5-> Countries are similar enough in size to generate factor price equalization, however, the world consists of $ n + 1 \ge 2 $ countries.  Each country that a firm decides to enter incurs a fixed investment cost of $ f_{ex} > 0 $.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\section{Equilibrium in the Open Economy}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Equilibrium in the Open Economy \#1}
+
+\begin{itemize}
+    \item<1-> Symmetry assumption ensures that all countries have the same wage, which is still normalized to one, and they also have the same aggregate variables.
+    \item<2-> Pricing for sales in the domestic market is the same as before:
+    \begin{equation*}
+        p_{d}\left( \phi \right) = \frac{w}{\rho \phi} = \frac{1}{\rho \phi}
+    \end{equation*}
+    but if we sell in a foreign market, we pay a transaction cost of $ \tau $, which makes the optimal price to charge in the foreign market:
+    \begin{equation*}
+        p_{x}\left( \phi \right) = \frac{\tau}{\rho \phi} = \tau p_{d}\left( \phi \right)
+    \end{equation*}
+    \item<3-> Revenues earned from domestic sales will then be $ r_{d}\left( \phi \right) = R\left( P \rho \phi \right)^{\sigma - 1} $ and for export sales $ r_{x}\left( \phi \right) = \tau^{1 - \sigma} r_{d}\left( \phi \right) $, where $ R $ and $ P $ represent aggregate expenditures and the price index in each country.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Equilibrium in the Open Economy \#2}
+
+\begin{itemize}
+    \item<1-> The total revenue of a firm then becomes:
+    \begin{equation*}
+        r\left( \phi \right) = \left\{ \begin{matrix}
+             r_{d}\left( \phi \right) \text{ if the firm does not export} \\
+             r_{d}\left( \phi \right) + nr_{x}\left( \phi \right) = \left( 1 + n\tau^{1 - \sigma} \right) r_{d}\left( \phi \right) \text{ if the firm exports to all countries}
+        \end{matrix} \right\}
+    \end{equation*}
+    \item<2->  If some firms do not export, there will not be the same variety of goods available to all consumers in each country (even though our symmetry assumption means that the level of variety of goods available will be the same in all countries).
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\subsection{Firm Entry, Exit, and Export Status}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Firm Entry}
+
+\begin{itemize}
+    \item<1-> Firms face the same productivity distribution $ g\left( \phi \right) $ and a negative shock probability $ \delta $ that they did before trade.  As export costs and benefits are equal across countries, firms will either export everywhere or not export.
+    \item<2-> Because there is no time discounting or export market uncertainty, firms are indifferent between paying $ f_{ex} $ as a one-time cost of $ f_{x} = \delta f_{ex} $ each period.  For notational simplicity, the paper uses the latter.
+    \item<3-> Because a firm will never export and not also produce for the domestic market, we can represent the fixed overhead cost as a cost to the firm’s domestic profits:
+    \begin{equation*}
+        \begin{split}
+            \pi_{d}\left( \phi \right) &= \frac{r_{d}\left( \phi \right)}{\sigma} - f \\
+            \pi_{x}\left( \phi \right) &= \frac{r_{x}\left( \phi \right)}{\sigma} - f_{x}
+        \end{split}
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\end{document}
