@@ -501,4 +501,254 @@ These two curves must cross once, and we get Figure 1:
 
 %--------------------------------------------------------------------
 
+\begin{frame}{Firm Exporting Cutoff}
+
+\begin{itemize}
+    \item<1-> A firm that produces has a combined profit of:
+    \begin{equation*}
+        \pi\left( \phi \right) = \pi_{d}\left( \phi \right) + \max\left\{ 0, n\pi_{x}\left( \phi \right) \right\}
+    \end{equation*}
+    \item<2-> Firm value is given by:
+    \begin{equation*}
+        v\left( \phi \right) = \max \left\{ 0, \frac{\pi\left( \phi \right)}{\delta} \right\}
+    \end{equation*}
+    \item<3-> Similarly to the closed economy case, we can identify $ \phi^{*} = \inf \left\{ \phi : v\left( \phi \right) > 0 \right\} $, but we can also identify $ \phi_{x}^{*} = \inf \left\{ \phi : \phi \ge \phi^{*} \text{ and } \pi_{x}\left( \phi \right) > 0 \right\} $.
+    \item<4-> If $ \phi_{x}^{*} > \phi^{*} $, then there are some firms that produce exclusively for the domestic market.  By definition, $ \pi_{d}\left( \phi^{*} \right) = 0 $ and $ \pi_{x}\left( \phi_{x}^{*} \right) = 0 $.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Firm Partitioning}
+
+\begin{itemize}
+    \item<1-> This partitioning of firms will occur if $ \tau^{\sigma - 1} f_{x} > f $ -- in words, if the trade costs are relatively high compared to overhead production costs.
+    \item<2-> If there are no fixed trade costs ($ f_{x} = 0 $), then no variable trade cost $ \tau $ will induce this partitioning.
+    \item<3-> Conversely, a large enough fixed trade cost $ f_{x} > f $ will induce partitioning even in the absence of variable costs ($ \tau = 1 $).
+    \item<4-> The probability of successful entry is $ p_{in} = 1 - G\left( \phi^{*} \right) $ and the probability of exporting for a successfully entering firm is: $ p_{x} = \frac{1 - G\left( \phi_{x}^{*} \right)}{1 - G\left( \phi^{*} \right)} $.
+    \item<5-> Let $ M $ be the mass of firms in any country, $ M_{x} = p_{x}M $ be the number of exporting firms in any country, and $ M_{t} = M + nM_{x} $ be the number of varieties available to consumers in any country.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\subsection{Aggregation}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Average Productivity Levels}
+
+{\small
+\begin{itemize}
+    \item<1-> Let $ \tilde{\phi} = \tilde{\phi}\left( \phi^{*} \right) $ and $ \tilde{\phi}_{x} = \tilde{\phi}\left( \phi_{x}^{*} \right) $ be the average productivity levels for producing firms and exporting firms, respectively.
+    \item<2-> Let $ \tilde{\phi}_{t} $ be the average productivity levels of the firms whose goods consumers are consuming:
+    \begin{equation*}
+        \tilde{\phi}_{t} = \left\{ \frac{1}{M_{t}} \left[ M \tilde{\phi}^{\sigma - 1} + nM_{x}\left( \frac{\tilde{\phi}_{x}}{\tau} \right)^{\sigma - 1} \right] \right\}^{\frac{1}{\sigma - 1}}
+    \end{equation*}
+    \item<3-> $ \tilde{\phi}_{t} $ is a useful statistic, because, similar to the closed economy equilibrium, it allows us to derive several variables of interest:
+    \begin{equation*}
+        \begin{split}
+            P &= M_{t}^{\frac{1}{1 - \sigma}} p\left( \tilde{\phi}_{t} \right) = M_{t}^{\frac{1}{1 - \sigma}} \frac{1}{\rho \tilde{\phi}} \\
+            R &= M_{t} r\left( \tilde{\phi} \right) \\
+            W &= \frac{R}{L} M_{t}^{\frac{1}{1 - \sigma}} \rho \tilde{\phi}_{t}
+        \end{split}
+    \end{equation*}
+\end{itemize}
+}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Average Revenue and Profit}
+
+The average revenue $ \tilde{r} $ and profit $ \tilde{\pi} $ earned across all firms can be expressed as:
+\begin{equation*}
+    \begin{split}
+        \tilde{r} &= r_{d}\left( \tilde{\phi} \right) + p_{x} n r_{x}\left( \tilde{\phi}_{x} \right) \\
+        \tilde{\pi} &= \pi_{d}\left( \tilde{\pi} \right) + p_{x} n \pi_{x}\left( \tilde{\pi}_{x} \right)
+    \end{split}
+\end{equation*}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\subsection{Equilibrium Conditions}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Average Profits}
+
+\begin{itemize}
+    \item<1-> Once again, using the relative revenue and profit conditions from equation (\ref{eq:relativerevenue}) we can derive:
+    \begin{equation*}
+        \begin{split}
+            \pi_{d}\left( \phi^{*} \right) = 0 &\Leftrightarrow \pi_{d}\left( \tilde{\phi} \right) = f k\left( \phi^{*} \right) \\
+            \pi_{x}\left( \phi_{x}^{*} \right) = 0 &\Leftrightarrow \pi_{x}\left( \tilde{\phi}_{x} \right) = f_{x} k\left( \phi_{x}^{*} \right)
+        \end{split}
+    \end{equation*}
+    where $ k\left( \phi \right) = \left[ \frac{\phi^{*}\left( \phi \right)}{\phi} \right]^{\sigma - 1} - 1 $.
+    \item<2-> We can also use (\ref{eq:relativerevenue}) to derive $ \phi_{x}^{*} $:
+    \begin{equation*}
+        \frac{r_{x}\left( \phi_{x}^{*} \right)}{r_{d}\left( \phi^{*} \right)} = \tau^{1 - \sigma} \left( \frac{\phi_{x}^{*}}{\phi^{*}} \right)^{\sigma - 1} = \frac{f_{x}}{f} \Leftrightarrow \phi_{x}^{*} = \phi^{*} \tau\left( \frac{f_{x}}{f} \right)^{\frac{1}{\sigma - 1}}
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Cutoff Points}
+
+\begin{itemize}
+    \item<1-> We can then define the average profit $ \overline{\pi} $ as a function of the cutoff point $ \phi^{*} $:
+    \begin{equation}
+        \begin{split}
+            \overline{\pi} &= \pi_{d}\left( \phi^{*} \right) + p_{x} n \pi_{x}\left( \tilde{\phi}_{x}^{*} \right) \\
+            &= f k\left( \phi^{*} \right) + p_{x} n f_{x} k\left( \tilde{\phi}_{x}^{*} \right)
+        \end{split}
+        \label{eq:ZCPopen}
+    \end{equation}
+    this is the open-economy analog of the zero-profit cutoff (ZCP) condition.
+    \item<2-> The firm valuation function, and therefore, the free-entry condition have not changed from the closed-economy version:
+    \begin{equation*}
+        v_{e} = 0 \Leftrightarrow \overline{\pi} = \frac{\delta f_{e}}{p_{in}}
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\subsection{Determination of the Equilibrium}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Determining Equilibrium \#1}
+
+\begin{itemize}
+    \item<1-> The free-entry condition and the ZCP condition can be used to pin down an equilibrium $ \phi^{*} $ and $ \overline{\pi} $.
+    \item<2-> The equilibrium $ \phi^{*} $ can be used, in turn, to derive $ \phi_{x}^{*} $, $ \tilde{\phi} $, $ \tilde{\phi}_{x} $, $ \tilde{\phi}_{t} $, and the ex-ante successful entry and export probabilities $ p_{in} $ and $ p_{x} $.
+    \item<3-> In a stationary equilibrium, the mass of firms successfully entering is again equal to the mass of the firms exiting, $ p_{in} M_{e} = \delta M $, which means that the aggregate payment to investment workers $ L_{e} $ equals the profit level $ \Pi $.  Aggregate revenue is thus determined exogenously by the size of the labor force, $ R = L $. 
+\end{itemize}
+
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Determining Equilibrium \#2}
+
+\begin{itemize}
+    \item<1-> Average firm revenue is determined by the ZCP and FE conditions:
+    \begin{equation*}
+        \overline{r} = r_{d}\left( \phi \right) + p_{x} n r_{x}\left( \tilde{\phi}_{x} \right) = \sigma \left( \overline{\pi} + f + p_{x} n f_{x} \right)
+    \end{equation*}
+    which, in turn, pins down the equilibrium mass of incumbent firms:
+    \begin{equation}
+        M = \frac{R}{\overline{r}} = \frac{L}{\sigma \left( \overline{\pi} + f + p_{x} n f_{x} \right)}
+        \label{eq:firmswithtrade}
+    \end{equation}
+    \item<2-> Knowing the mass of firms in each country tells us the variety available in each country $ M_{t} = \left( 1 +n p_{x} \right) M $ and the price index $ P = M_{t}^{\frac{1}{1 - \sigma}} / \rho \tilde{\phi}_{t} $, which is the inverse of which is the real wage. 
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\section{The Impact of Trade}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Comparative Statics}
+
+\begin{itemize}
+    \item<1-> If we compare the ZCP for the closed economy:
+    \begin{equation*}
+        \overline{\pi} = f_{e} k\left( \phi^{*} \right)
+    \end{equation*}
+    and the ZCP for the open economy:
+    \begin{equation*}
+        \overline{\pi} = f_{e} k\left( \phi^{*} \right) + p_{x} n f_{x}\left( \phi_{x}^{*} \right)
+    \end{equation*}
+    it is clear that the opportunity to export shifts the ZCP curve upwards.
+    \item<2-> Going back to Figure 1, this change would induce a higher cutoff productivity level: $ \phi^{*} > \phi_{a}^{*} $, and a higher average productivity level for each firm.
+    \item<3-> Therefore, firms with productivity levels between $ \phi_{a}^{*} $ and $ \phi^{*} $ would exit the market when the country opened to trade (and the remaining firms would be more productive).
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Firm Numbers}
+
+\begin{itemize}
+    \item<1-> Looking at the number of firms in equation (\ref{eq:firmswithtrade}), it is clear that the number of firms will fall with trade.  Under reasonable parameter assumptions, it is probably the case that:
+    \begin{equation*}
+        M_{t} = \left( 1 + n p_{x} \right) M > M_{a}
+    \end{equation*}
+    although, if trade costs are high (and $ p_{x} $ is low) this may not be guaranteed.
+    \item<2-> In the appendix, it is shown that, even if firm variety falls, the productivity gain in $ \overline{\pi} $ will always be large enough to guarantee a welfare gain. 
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\section{The Impact of Trade Liberalization}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{The Impact of Trade Liberalization}
+
+\begin{itemize}
+    \item<1-> The previous section looked at an economy going from autarky to trade.
+    \item<2-> This section looks at liberalization of trade as operationalized by changes in $ n $, $ \tau $, and $ f_{x} $.
+    \item<3-> Increases in exposure to trade through any of these mechanisms will have similar results as moving from trade to autarky. 
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Increase in the Number of Trading Partners}
+
+\begin{itemize}
+    \item<1-> Looking at equation (\ref{eq:ZCPopen}), it is clear that an increase in $ n $ shifts the ZCP curve upwards.
+    \item<2-> An upwards shift in ZCP increases the productivity cutoff level: $ \phi^{*'} > \phi^{*} $, as well as $ \phi_{x}^{*'} > \phi_{x}^{*} $.
+    \item<3-> As a result, the least productive firms exit the market.  Some exporting firms will actually cease exporting, but the firms that do export will have higher profits.
+    \item<4-> Market shares and profits are reallocated to the more efficient firms.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Decrease in Variable Trade Costs}
+
+\begin{itemize}
+    \item<1-> A decrease in the variable trade cost $ \tau $ will have almost identical effects as the increase in trade partners.
+    \item<2-> Decrease in $ \tau $ will cause the ZCP curve to shift upwards again, increasing the entry cutoff level $ \phi^{*} $.
+    \item<3-> The big difference is that the export cutoff level $ \phi_{x}^{*} $ will fall.  So, the least productive firms will exit, but some middle level productivity firms will now export.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}{Decrease in Fixed Trade Costs}
+
+\begin{itemize}
+    \item<1-> A decrease in the fixed export cost $ f_{x} $ will have a similar effect.
+    \item<2-> Decrease in $ f_{x} $ will cause the ZCP curve to shift upwards again, increasing the entry cutoff level $ \phi^{*} $.
+    \item<3-> The export cutoff level $ \phi_{x}^{*} $ will fall again.  So, the least productive firms will exit, but some middle level productivity firms will now export.
+    \item<4-> The difference from a change in $ \tau $ is that only new exporting firms will see higher sales and profits.  Existing exporters will not see a change.
+\end{itemize}
+    
+\end{frame}
+
+%--------------------------------------------------------------------
+
 \end{document}
