@@ -400,9 +400,10 @@ where:
     \end{equation}
     \item<2-> The price index used in the denominator above, is the CPI-U index for all goods excluding shelter measured in year 2000 U.S. dollars.
     \item<3-> The workers’ optimized utility function also leads to his local good demand
-    \begin{equation*}
+    \begin{equation}
         HD_{i,j,t} = \frac{\xi w_{j,t}^{edu}}{R_{j,t}}
-    \end{equation*}
+        \label{eq:localgooddemand}
+    \end{equation}
 \end{itemize}
     
 \end{frame}
@@ -478,6 +479,367 @@ where:
     \end{equation*}
     \item<2->Observed variables are the high and low skilled population, wages, rent, the amenity index, worker demographics, and workers’ states and census divisions of birth.  Exogenous amenities and idiosyncratic taste preferences are unobserved.  Estimated parameters are the workers’ preferences for wages, rent, and amenities ($ \beta $, $ \xi $).
 \end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Housing Supply}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Housing Supply}
+
+\begin{itemize}
+    \item<1-> Local prices $ R_{j,t} $, are set through equilibrium in the housing market.
+    \item<2-> Developers are price takers and sell homogeneous houses at the marginal cost of production:
+    \begin{equation*}
+        P_{j,t}^{home} = MC\left( CC_{j,t}, LT_{j,t} \right)
+    \end{equation*}
+    where $ CC_{j,t} $ are local construction costs and $ LC_{j,t} $ are local land costs.
+    \item<3-> In a steady-state real estate market equilibrium, there is no uncertainty and prices are equal to the discounted value of rents:
+    \begin{equation*}
+        R_{j,t} = \iota_{t} \times MC\left( CC_{j,t}, LT_{j,t} \right)
+    \end{equation*}
+    where $ \iota_{t} $ is the interest rate.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Housing Supply Equation}
+
+\begin{itemize}
+    \item<1->  The cost of land is a function of the aggregate demand for local goods given by equation (\ref{eq:localgooddemand}), which shows that local goods demand increases when wages rise or the price of local goods falls.  In-migration also affects housing demand.
+    \item<2-> The log housing supply equation is parameterized as:
+    \begin{equation*}
+        \begin{split}
+            r_{j,t} &= \log \left( R_{j,t} \right) = \log \left( \iota_{t} \right) + \log \left( CC_{j,t} \right) + \gamma_{j} \log \left( HD_{j,t} \right) \\
+            \gamma_{j} &= \gamma + \gamma^{geo} \log\left( x_{j}^{geo} \right) + \gamma^{reg} \log\left( x_{j}^{reg} \right) \\
+            HD_{j,t} &= L_{j,t} \frac{\xi w_{j,t}^{L}}{R_{j,t}} + H_{j,t} \frac{\xi w_{j,t}^{H}}{R_{j,t}}
+        \end{split}
+    \end{equation*}
+    \item<3-> We can observe housing rent, land availability, land-use regulation, and local good demand.  Construction costs and the interest rate are unobserved.  Parameters to be estimated are housing supply elasticities ($ \gamma $) and the local good expenditure share ($ \xi $).
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Amenity Supply}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Amenity Supply}
+
+\begin{itemize}
+    \item<1-> Some amenities supplied in a city are due to exogenous factors outside the model, these amenities are represented by the vector $ x_{j,t}^{A} $.
+    \item<2-> Some amenities respond endogenously to the types of residents who live in the city.  The bundle of observable amenities will be represented by $ a_{j,t} $ (which is the first principal component of a large vector of amenities).
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Amenity Supply Equation}
+
+\begin{itemize}
+    \item<1-> The level of the endogenous amenity index is determined by the high skill employment ratio $ \frac{H_{j,t}}{L_{j,t}} $.
+    \begin{equation*}
+        a_{j,t} = \gamma^{a} \log \left( \frac{H_{j,t}}{L_{j,t}} \right) + \varepsilon_{j,t}^{a}
+    \end{equation*}
+    \item<2-> We can observe the MSAs’ state, census division, and endogenous amenities, and the college employment ratio.  Exogenous amenities and the exogenous component of the amenity index are unobserved.  The elasticity of amenity supply ($ \gamma^{a} $) is estimated.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Equilibrium}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Equilibrium \#1}
+
+Equilibrium in the model is defined by a menu of wages, rents, and amenity levels with populations such that:
+
+\begin{itemize}
+    \item<1-> The high skill labor demand equals high skill labor supply:
+    \begin{equation}
+        \begin{split}
+            H_{j,t}^{*} &= \sum_{i \in H_{t}} \frac{\exp\left( \delta_{j,t}^{z} + x_{j}^{st}\beta_{i}^{st} z_{i} + x_{j}^{div} \beta_{i}^{div} z_{i} \right)}{\sum_{k}^{J} \exp\left( \delta_{j,t}^{z} + x_{j}^{st}\beta_{i}^{st} z_{i} + x_{j}^{div} \beta_{i}^{div} z_{i} \right)} \\
+            w_{j,t}^{H^*} &= \gamma_{HH} \log \left( H_{j,t}^{*} \right) + \gamma_{HL} \log \left( L_{j,t}^{*} \right) + \varepsilon_{j,t}^{H} 
+            \label{eq:wagehigh}
+        \end{split}
+    \end{equation}
+    \item<2-> The low skill labor demand equals low skill labor supply:
+    \begin{equation}
+        \begin{split}
+            L_{j,t}^{*} &= \sum_{i \in L_{t}} \frac{\exp\left( \delta_{j,t}^{z} + x_{j}^{st}\beta_{i}^{st} z_{i} + x_{j}^{div} \beta_{i}^{div} z_{i} \right)}{\sum_{k}^{J} \exp\left( \delta_{j,t}^{z} + x_{j}^{st}\beta_{i}^{st} z_{i} + x_{j}^{div} \beta_{i}^{div} z_{i} \right)} \\
+            w_{j,t}^{L^*} &= \gamma_{LH} \log \left( H_{j,t}^{*} \right) + \gamma_{LL} \log \left( L_{j,t}^{*} \right) + \varepsilon_{j,t}^{L} 
+            \label{eq:wagelow}
+        \end{split}
+    \end{equation}
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Equilibrium \#2}
+
+\begin{itemize}
+    \item<1-> Housing demand equals housing supply:
+    \begin{equation*}
+        \begin{split}
+            r_{j,t}^{*} &= \log\left( \iota_t \right) + \log\left( CC_{j,t} \right) + \gamma_{j} \log\left( HD_{j,t}^{*} \right) \\
+            HD_{j,t}^{*} &= L_{j,t}^{*} \frac{\xi \exp\left( w_{j,t}^{L^*} \right)}{\exp\left( r_{j,t}^{*} \right)} + H_{j,t}^{*} \frac{\xi \exp\left( w_{j,t}^{H^*} \right)}{\exp\left( r_{j,t}^{*} \right)}
+        \end{split}
+    \end{equation*}
+    \item<2-> Endogenous amenities demand equals endogenous amenities supply:
+    \begin{equation*}
+        \begin{split}
+            a_{j,t}^{*} &= \gamma^{a} \log\left( \frac{H_{j,t}^{*}}{L_{j,t}^{*}} \right) + \varepsilon_{j,t}^{a} \\
+            \delta_{j,t}^{z} &= \left( w_{j,t}^{edu^*} - \xi r_{j,t}^{*} \right) \beta^{w} z + a_{j,t}^{*} \beta_{i}^{a} z + x_{j,t}^{a} \beta_{i}^{x} z, \forall z
+        \end{split}
+    \end{equation*}
+\end{itemize}
+
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Estimation}
+
+\subsection{Endogenous Amenity Index}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Estimating the Endogenous Amenity Index}
+
+\begin{itemize}
+    \item<1-> Data is collected on 15 different amenities, which are grouped into 6 categories: retail, transportation, crime, environment, school quality, and job quality (beyond wages).  Amenities are combined into a single index $ a_{j,t} $ using a principal components analysis.
+    \item<2->  In order to avoid overweighting one category, analysis first creates a PCA index within each category, and then creates a PCA with each category’s index.  Table 4 shows the various weightings.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Table 4}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{DiamondTable4.jpg}
+    \label{fig:Table4}
+\end{figure}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Bartik Labor Demand Shocks}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Bartik Labor Demand Shocks}
+
+\begin{itemize}
+    \item<1->  Key to identifying model parameters is estimating how cities’ economic outcomes respond to exogenous shocks in local firm productivities based on Bartik (1991).
+    \item<2-> The Bartik shocks for high and low skill workers are:
+    \begin{equation*}
+        \begin{split}
+            \Delta B_{j,t}^{H} &= \sum_{ind}\left( w_{ind, -j,t}^{H} - w_{ind, -j,1980}^{H} \right) \frac{H_{ind,j,1980}}{H_{j,1980}} \\
+            \Delta B_{j,t}^{L} &= \sum_{ind}\left( w_{ind, -j,t}^{L} - w_{ind, -j,1980}^{L} \right) \frac{L_{ind,j,1980}}{L_{j,1980}}
+        \end{split}
+    \end{equation*}
+    where $ w_{ind, -j,t}^{H} $ and $ w_{ind, -j,t}^{L} $ are the average log wages of high and low skill workers in industry $ ind $ in cities other than $ j $ in year $ t $.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Bartik Shocks and Labor Demand}
+
+Bartik labor demand shocks are a component of a city’s exogenous productivity changes over time.  The productivity changes from equations (\ref{eq:wagehigh}) and (\ref{eq:wagelow}) can be written as:
+\begin{equation}
+    \Delta \varepsilon_{j,t}^{H} = \gamma_{BHH} \Delta B_{j,t}^{H} + \gamma_{BHL} \Delta B_{j,t}^{L} + \Delta \tilde{\varepsilon}_{j,t}^{H}
+    \label{eq:Bartikshockhigh2}
+\end{equation}
+\begin{equation}
+    \Delta \varepsilon_{j,t}^{L} = \gamma_{BLH} \Delta B_{j,t}^{H} + \gamma_{BLL} \Delta B_{j,t}^{L} + \Delta \tilde{\varepsilon}_{j,t}^{L}
+    \label{eq:Bartikshocklow2}
+\end{equation}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Labor Demand}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Labor Demand}
+
+\begin{itemize}
+    \item<1-> Using equations (\ref{eq:wagehigh}) and (\ref{eq:wagelow}) and differencing cities’ wages relative to their 1980 levels gives us:
+    \begin{equation}
+        \Delta w_{j,t}^{H} = \gamma_{HH} \Delta H_{j,t} + \gamma_{HL} \Delta L_{j,t} + \Delta \varepsilon_{j,t}^{H}
+        \label{eq:wagechangehigh}
+    \end{equation}
+    \begin{equation}
+        \Delta w_{j,t}^{L} = \gamma_{LH} \Delta H_{j,t} + \gamma_{LL} \Delta L_{j,t} + \Delta \varepsilon_{j,t}^{L}
+        \label{eq:wagechangelow}
+    \end{equation}
+    \item<2-> Plugging the Bartik shock equations (\ref{eq:Bartikshockhigh2}) and (\ref{eq:Bartikshocklow2}) into the wage change equations (\ref{eq:wagechangehigh}) and (\ref{eq:wagechangelow}) gives us:
+    \begin{equation*}
+        \Delta w_{j,t}^{H} = \gamma_{HH} \Delta H_{j,t} + \gamma_{HL} \Delta L_{j,t} + \gamma_{BHH} \Delta B_{j,t}^{H} + \gamma_{BHL} \Delta B_{j,t}^{L}+ \Delta \tilde{\varepsilon}_{j,t}^{H}
+    \end{equation*}
+    \begin{equation*}
+        \Delta w_{j,t}^{L} = \gamma_{LH} \Delta H_{j,t} + \gamma_{LL} \Delta L_{j,t} + \gamma_{BLH} \Delta B_{j,t}^{H} + \gamma_{BLL} \Delta B_{j,t}^{L}+ \Delta \tilde{\varepsilon}_{j,t}^{L}
+    \end{equation*}
+\end{itemize}
+
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Bartik Shocks and Exclusion Restrictions}
+
+\begin{itemize}
+    \item<1->  The Bartik shocks provide plausibly exogenous labor demand shifters.  The labor demand elasticities will be identified through variations in the labor supply that come through housing supply.
+    \item<2-> In order for housing supply to help to identify labor market equilibrium, we need to make the following exclusion restrictions:
+    \begin{equation*}
+        \begin{split}
+            E\left[ \Delta \tilde{\varepsilon}_{j,t}^{H} , \Delta Z_{j,t} \right] &= 0 \\
+            E\left[ \Delta \tilde{\varepsilon}_{j,t}^{L} , \Delta Z_{j,t} \right] &= 0
+        \end{split}
+    \end{equation*}
+    where instruments:
+    \begin{equation*}
+        \Delta Z_{j,t} \in \left\{ \begin{matrix}
+            \Delta B_{j,t}^{H} x_{j}^{reg} , \Delta B_{j,t}^{L} x_{j}^{reg} \\
+            \Delta B_{j,t}^{H} x_{j}^{geo} , \Delta B_{j,t}^{L} x_{j}^{geo} \\
+        \end{matrix} \right\}
+    \end{equation*}
+    In words, the Bartik labor shocks have to be uncorrelated with the level of land use regulations and land availability measures by MSA.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Housing Supply}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Housing Supply}
+
+\begin{itemize}
+    \item<1-> Rewrite the housing supply curve in changes since 1980:
+    \begin{equation*}
+        \Delta r_{j,t} = \Delta \log \left( \iota_{t} \right) + \Delta \log\left( CC_{j,t} \right) + \left( \gamma + \gamma^{geo} \exp \left( x_{j}^{geo} \right) + \gamma^{reg} \exp\left( x_{j}^{reg} \right) \right) \Delta \log\left( HD_{j,t} \right)
+    \end{equation*}
+    \begin{equation*}
+        HD_{j,t} = L_{j,t}\frac{\xi w_{j,t}^{L}}{R_{j,t}} + H_{j,t}\frac{\xi w_{j,t}^{H}}{R_{j,t}}
+    \end{equation*}
+    \item<2-> However, we have a problem in that housing demand is a variable endogenous to the labor supply.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Housing Supply Identification}
+
+The key identifying assumption in the housing market is that Bartik labor demand shocks are uncorrelated with changes in local construction costs.  Specifically:
+\begin{equation*}
+    E\left[ \Delta \log\left( CC_{j,t} \right), \Delta Z_{j,t} \right] = 0
+\end{equation*}
+where:
+\begin{equation*}
+    \Delta Z_{j,t} \in \left\{ \begin{matrix}
+            \Delta B_{j,t}^{H} , \Delta B_{j,t}^{L} \\
+            \Delta B_{j,t}^{H} x_{j}^{reg} , \Delta B_{j,t}^{L} x_{j}^{reg} \\
+            \Delta B_{j,t}^{H} x_{j}^{geo} , \Delta B_{j,t}^{L} x_{j}^{geo} \\
+        \end{matrix} \right\}
+\end{equation*}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Labor Supply}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Labor Supply}
+
+\begin{itemize}
+    \item<1-> The indirect utility of city $ j $ for worker $ i $ with demographics $ z_{i} $ is:
+    \begin{equation*}
+        V_{i,j,t} = \delta_{j,t}^{z} + x_{j}^{st} \beta^{st} z_{i} + x_{j}^{div} \beta^{div} z_{i} + \varepsilon_{i,j,t}
+    \end{equation*}
+    \begin{equation*}
+        \delta_{j,t}^{z} = \left( w_{j,t}^{edu} - \xi r_{j,t} \right) \beta^{w} z + a_{j,t} \beta_{i}^{a} z + x_{j,t}^{A} \beta_{i}^{x} z
+    \end{equation*}
+    \item<2->  To estimate workers’ preferences for cities, paper uses two-step estimator similar to Berry, Levinsohn, and Pakes (2004).
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Labor Supply Estimates}
+
+\begin{itemize}
+    \item<1-> First step: MLE where mean utility value of each city $ j $ for each demographic group $ z $ is the parameter to be estimated.  Observed population differences in the data for a given type of worker identify the mean utility estimates for each city.
+    \item<2-> Second step:  decompose mean utility estimates into how workers value wages, rents, and amenities.  Differencing cities’ mean utility estimates for each demographic group relative to 1980 levels gives:
+    \begin{equation}
+        \delta_{j,t}^{z} = \left( \Delta w_{j,t}^{edu} - \xi \Delta r_{j,t} \right) \beta^{w} z + \Delta a_{j,t} \beta_{i}^{a} z + \Delta x_{j,t}^{A} \beta_{i}^{x} z
+        \label{eq:deltaamenities1}
+    \end{equation}
+    \item<3->  Observed values are changes in cities’ wages, rents, and amenity index.  Exogenous amenity changes are unobserved.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Labor Supply Estimates}
+
+\begin{itemize}
+    \item<1-> Define $ \Delta \zeta_{j,t}^{z} $ as the change in the utility value of city $ j $’s amenities unobserved to us for workers with demographics $ z $.
+    \begin{equation*}
+        \zeta_{j,t}^{z} = \beta^{A} z \Delta x_{j,t}^{A}
+    \end{equation*}
+    \item<2-> Plugging this expression back into equation (\ref{eq:deltaamenities1}) gives us:
+    \begin{equation}
+        \delta_{j,t}^{z} = \left( \Delta w_{j,t}^{edu} - \xi \Delta r_{j,t} \right) \beta^{w} z + \Delta a_{j,t} \beta_{i}^{a} z + \Delta \zeta_{j,t}^{z}
+        \label{eq:deltaamenities2}
+    \end{equation}
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Estimator Moment Conditions}
+
+To identify workers’ preferences for cities’ wages, rents, and amenities, instrument for the endogenous variables with the Bartik labor demand shocks and their interactions with housing supply elasticity characteristics.  This should be highly correlated with changes in the rental rate, but not the unobserved amenities.  More formally, the estimator assumes:
+\begin{equation*}
+    E\left[ \Delta \zeta_{j,t}^{z} , \Delta Z_{j,t} \right] = 0
+\end{equation*}
+where:
+\begin{equation*}
+    \Delta Z_{j,t} \in \left\{ \begin{matrix}
+            \Delta B_{j,t}^{H} , \Delta B_{j,t}^{L} \\
+            \Delta B_{j,t}^{H} x_{j}^{reg} , \Delta B_{j,t}^{L} x_{j}^{reg} \\
+            \Delta B_{j,t}^{H} x_{j}^{geo} , \Delta B_{j,t}^{L} x_{j}^{geo} \\
+        \end{matrix} \right\}
+\end{equation*}
     
 \end{frame}
 
