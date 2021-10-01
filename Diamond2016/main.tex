@@ -44,7 +44,7 @@
 {
   \begin{frame}
     \frametitle{Table of Contents}
-    \tableofcontents[currentsection]
+    \tableofcontents[currentsection,hideallsubsections]
   \end{frame}
 }
 
@@ -840,6 +840,382 @@ where:
             \Delta B_{j,t}^{H} x_{j}^{geo} , \Delta B_{j,t}^{L} x_{j}^{geo} \\
         \end{matrix} \right\}
 \end{equation*}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Amenity Supply}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Amenity Supply}
+
+\begin{itemize}
+    \item<1-> Differencing the amenity supply equation relative to its 1980 level gives us:
+    \begin{equation*}
+        \Delta a_{j,t} = \gamma^{a} \Delta \log\left( \frac{H_{j,t}}{L_{j,t}} \right) + \Delta \varepsilon_{j,t}^{a}
+    \end{equation*}
+    \item<2-> The amenity supply elasticity is identified by instrumenting for changes in the college employment ratio with the Bartik labor demand shocks and their interactions with housing supply elasticity characteristics.  Specifically, assume that:
+    \begin{equation*}
+        E\left[ \Delta \varepsilon_{j,t}^{a} , \Delta Z_{j,t} \right] = 0
+    \end{equation*}
+    where:
+    \begin{equation*}
+        \Delta Z_{j,t} \in \left\{ \begin{matrix}
+            \Delta B_{j,t}^{H} , \Delta B_{j,t}^{L} \\
+            \Delta B_{j,t}^{H} x_{j}^{reg} , \Delta B_{j,t}^{L} x_{j}^{reg} \\
+            \Delta B_{j,t}^{H} x_{j}^{geo} , \Delta B_{j,t}^{L} x_{j}^{geo} \\
+        \end{matrix} \right\}
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Parameter Estimates}
+
+\subsection{Worker Labor Supply}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Parameter Estimates}
+
+\begin{itemize}
+    \item<1-> All parameters are jointly estimated using two-step GMM.  Standard errors are clustered by MSA.
+    \item<2->  Four versions of the model are estimated.  First estimate is the “standard” model, which assumes local amenities and firms’ local productivity levels are exogenous and thus do not depend on the college employment ratio.  Estimates are in column 1 of Table 5.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Table 5, Panel A}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.55]{DiamondTable5_1.jpg}
+    \label{fig:Table5a}
+\end{figure}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Standard and Restricted Models}
+
+\begin{itemize}
+    \item<1-> Column 1 of Table 5 shows the ``standard” model.  Both college and non-college workers prefer higher wages and lower rents. However, their willingness to trade off wages and rents are extremely different, indicating they appear to have very different expenditure shares on local goods.
+    \item<2-> Consumer Expenditure Survey (CEX) from 2000 census allows us to measure local expenditure share directly, which comes out to 62\%.  2nd column of Table 5 re-runs standard model while restricting local expenditure share to 0.62.
+    \item<3-> The restricted standard model seems to imply that college workers seem to \emph{prefer} lower wages and higher rents.  
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Full Model}
+
+\begin{itemize}
+    \item<1-> The fact that college educated workers appear to be indifferent to higher local prices seems to indicate that there is an omitted variables bias, which Diamond attributes to local endogenous amenities.
+    \item<2-> Column 3 of Table 5 adds the amenity index and keeps the 0.62 local expenditure restriction (she calls this the ``full” model).  This result shows that, other things equal, college workers do like higher wages and lower rents, but are somewhat less sensitive to it than non-college workers.
+    \item<3-> However, college workers do have a much stronger preference for local amenities.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Expenditure Parameters by Demographic Groups}
+
+\begin{itemize}
+    \item<1-> Column 4 of Table 5 allows the local expenditure parameter to be estimated by group and includes the amenity index.  Expenditure shares are highly correlated with rents, so the estimate is noisier.
+    \item<2-> Bottom of Panel A of Table 5 looks at differences across demographic groups.  Blacks and immigrants tend to be somewhat more sensitive to wages, rents, and amenities, but estimates are noisier.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Table 6}
+
+\begin{figure}
+    \centering
+    \includegraphics{DiamondTable6.jpg}
+    \label{fig:Table6}
+\end{figure}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Value of State and Census Division of Birth}
+
+\begin{itemize}
+    \item<1-> Table 6 looks at the value of living in one’s home state and census division of birth.
+    \item<2->  Non-college workers are 4.4 times more likely to live in an MSA in their state of birth and college workers are only 3.5 times more likely.
+    \item<3-> Same census division is 2.2 times more likely for both college and non-college workers. 
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Housing Supply}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Table 5, Panels B-D}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.43]{DiamondTable5_2.jpg}
+    \label{fig:Table5b}
+\end{figure}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Housing Supply}
+
+\begin{itemize}
+    \item<1-> Panel B of Table 5 presents housing supply elasticity estimates.
+    \item<2-> Housing supply is less elastic in MSAs with less land availability and more land use regulations.  Estimates do not vary substantially across different models.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Labor Demand}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Labor Demand}
+
+\begin{itemize}
+    \item<1-> Panel C of Table 5 shows the estimates for local labor demand curves.  Elasticity of labor substitution between college and non-college workers is almost identical at 0.392 and 0.393 in first two models.
+    \item<2-> Full model allows for a more flexible labor demand curve.  Downward sloping labor demand curve is found as expected for non-college workers, and they are substitutable for college workers.
+    \item<3-> Demand for college workers is more interesting.  The labor demand curve is \emph{upwards} sloping, though not significantly different than zero, but significantly greater than for non-college labor. There may be an endogenous productivity effect from having college workers around.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Amenity Supply}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Amenity Supply}
+
+\begin{itemize}
+    \item<1->  Panel D of Table 5 estimates the elasticity of the supply of the amenity index with respect to the college employment ratio.
+    \item<2-> Both models report similar elasticities of amenity supply between 2.60 and 2.65.
+    \item<3->  An increase in the city’s college employment ratio endogenously changes the supply of amenities in the area.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Estimation Robustness}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Estimation Robustness}
+
+\begin{itemize}
+    \item<1-> Robustness checks with several different variable definitions are in an Appendix.
+    \item<2-> Details are online, but no very interesting results.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Amenities and Productivity Across Cities}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Amenities and Productivity Across Cities}
+
+\begin{itemize}
+    \item<1->  With estimated parameters, one can infer the exogenous productivity of local firms and desirability of local amenities in each city.
+    \item<2-> Going by the indirect utility function (\ref{eq:deltaamenities2}), we can derive the utility that workers of type $ z $ receive from amenities in city $ j $ in year $ t $ as:
+    \begin{equation*}
+        Amen_{j,t}^{z} = \beta_{i}^{a} a_{j,t} + \zeta_{j,t}^{z} = \beta^{w} z\left( w_{j,t}^{edu} - \xi r_{j,t} \right)
+    \end{equation*}
+    \item<3->  Basic idea is that amenities are inferred to be the highest in cities which have higher population levels of a given demographic group than expected given the city’s wage and rent levels.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Amenities and Productitivity Across Cities}
+
+\begin{itemize}
+    \item<1-> Results seem to conform with intuition.  Large coastal cities have the highest estimated amenity indexes, whereas the lowest estimated amenity indexes tend to be in rust-belt cities.  Some differences exist between college and non-college workers, but they are not very different.
+    \item<2-> Biggest increases in productivity for high-skill workers were in major tech hubs.
+    \item<3-> Biggest increases in productivity for low-skill workers were in metro areas that had lots of agricultural production and/or shipping centers with jobs that are difficult to offshore.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Table 7}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.85]{DiamondTable7.jpg}
+    \label{fig:Table7}
+\end{figure}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Relationship Between Amenities and Productivity Changes}
+
+\begin{itemize}
+    \item<1-> Table 7 shows the relationship between amenities changes and productivity changes.
+    \item<2-> Amenity changes are strongly correlated with each other.
+    \item<3-> College and non-college productivities are weakly correlated with each other.
+    \item<4-> College and non-college wages are strongly correlated with each other.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{The Determinants of Cities’ College Employment Ratio Changes}
+
+\subsubsection{College Employment Ratio Changes and Productivity}
+
+%-------------------------------------------------------------
+
+\begin{frame}{College Employment Ratio Changes and Productivity}
+
+\begin{itemize}
+    \item<1-> Changes in local productivity directly impact wages, but also influence local prices and amenities through migration.
+    \item<2-> The direct effect of exogenous productivity changes from 1980 to 2000 are inferred from the model and high and low skill wages:
+    \begin{equation*}
+        \begin{split}
+            \hat{w}_{j,2000}^{H} &= \gamma_{HH} \log\left( H_{j,1980} \right) + \gamma_{HL} \log\left( L_{j,1980} \right) + \varepsilon_{j,2000}^{H} \\
+            \hat{w}_{j,2000}^{L} &= \gamma_{LH} \log\left( H_{j,1980} \right) + \gamma_{LL} \log\left( L_{j,1980} \right) + \varepsilon_{j,2000}^{L}
+        \end{split}
+    \end{equation*}
+    where  $ \hat{w}_{j,2000}^{H} $ and $ \hat{w}_{j,2000}^{L} $ are the counter factual high and low skill wages driven by exogenous productivity shocks and initial labor market composition.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{College Employment Ratio Changes and Productivity}
+
+Using the counter factual wages and the amenity levels of 1980, we can use the model to predict where workers would live in a set of hypothetical cities with 2000 wages and 1980 amenities:
+\begin{equation*}
+    V_{i,j,t} = \left( \hat{w}_{j,2000}^{edu} - \xi r_{j,1980} \right) \beta^{w} z_{i} + a_{j,1980} \beta_{i}^{a} + x_{j,1980} \beta_{i}^{x} + x_{j}^{st}\beta_{i}^{st} + x_{j}^{div} \beta_{i}^{div} + \varepsilon_{i,j,1980}
+\end{equation*}
+Predicted cities’ college employment ratios from this hypothetical world are compared to those observed in the data. 
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Figure 2}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.57]{DiamondFig2.jpg}
+    \label{fig:Figure2}
+\end{figure}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Counter Factuals vs. Observed Employment Ratios}
+
+\begin{itemize}
+    \item<1-> Panel A of Figure 2 shows the correlation of the observed college employment ratios against the counter factual ratios.  The correlation between these is strongly positive with a coefficient of 0.80.
+    \item<2-> If endogenous amenity changes were not an important factor in how productivity changes influenced cities’ college employment ratio changes, then local wage and rent changes should be at least as strong of a predictor of college employment ratio changes.
+    \item<3-> Panel B plots observed college employment ratio changes against predicted college employment ratio changes.  The correlation is positive, but only 0.32, which suggests that amenity changes are important component through which cities’ college employment ratios change.
+    \item<4-> Panel C repeats this analysis, but plots actual college employment ratio changes against changes predicted due to wages, rents, and endogenous amenities.  The correlation coefficient is now 0.86, indicating that the combination of these three factors is important.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Welfare Implications for Well-Being Inequality}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Welfare Implications for Well-Being Inequality}
+
+\begin{itemize}
+    \item<1-> Initial analysis showed that the nationwide college wage gap increased by 19\% between 1980 and 2000.  But there may be a greater change due to residence choices.
+    \item<2->  Local real wage gap, which takes into account rents, has increased by 15\%.  But this doesn’t capture why college graduates pay higher rents.
+    \item<3-> To measure how changes in cities wages, rents, and amenities each contribute to well-being inequality, the paper conducts a welfare decomposition.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Table 9}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{DiamondTable9.jpg}
+    \label{fig:Table9}
+\end{figure}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Well-Being Inequality}
+
+\begin{itemize}
+    \item<1->  First step, measure each worker’s expected utility change from 1980 to 2000 if only wages had changed, but local rents and amenities stayed constant.  Table 9 shows these results.  Utility gap due to wages only is equal to 21.8\%.
+    \item<2-> Column 2, which accounts for local rent changes, has a gap of 19.4\%.
+    \item<3-> Column 3 looks at impact of amenity changes holding the national share of college labor constant and only looking at re-sorting of workers across MSAs.  Gap increases to 25.6\%.
+    \item<4->  Finally, Column 4 allows the national share of college labor to change and have average level of amenities adjust to increase in college labor.  Gap widens significantly to 57.3\%.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Conclusions}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Conclusions}
+
+\begin{itemize}
+    \item<1->  Between 1980-2000, there was an increase in the wage gap in the U.S. between college-educated and non-college-educated labor as well as an increase in the share of college-educated labor.
+    \item<2->  At the same time, college educated workers began to disproportionately concentrate in nicer but more expensive cities.
+    \item<3->  Diamond shows that this labor sorting raised the welfare of college-educated workers over and above what is accounted for by looking at nominal wages.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Conclusions}
+
+\begin{itemize}
+    \item<1->  Why do we care?  International trade is blamed in part for the increase in wage dispersion.
+    \item<2->  If new and better jobs are being created in some parts of the country, and not in others, it may be harder for people to adjust to the shocks from trade.
+\end{itemize}
     
 \end{frame}
 
