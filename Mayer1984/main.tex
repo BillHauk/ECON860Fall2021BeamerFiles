@@ -1,0 +1,315 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+%\usepackage[authordate,backend=biber,natbib]{biblatex-chicago}
+%\usepackage{booktabs}
+%\addbibresource{growthreferences.bib}
+
+%\usepackage{utopia} %font utopia imported
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title[Mayer (1984)] %optional
+{Endogenous Tariff Formation}
+
+\subtitle{Wolfgang Mayer, \emph{American Economic Review}, 1984}
+
+\author [Hauk] % (optional)
+{William~R.~Hauk,~Jr.} %\inst{1} %\and J.~Doe\inst{2}} 
+
+\institute[UofSC] % (optional)
+{
+  %\inst{1}%
+  Darla Moore School of Business\\
+  University of South Carolina
+  %\and
+  %\inst{2}%
+  %Faculty of Chemistry\\
+  %Very Famous University
+}
+
+\date[ECON 860, Fall 2021] % (optional)
+{ECON 860 -- International Trade Theory\\Fall 2021}
+
+\logo{\includegraphics[height=1cm]{UofSC_Monogram_Stack_CMYK_G.jpg}}
+
+%End of title page configuration block
+
+%---------------------------------------------------------
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+%------------------------------------------------------------
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+
+%-------------------------------------------------------------
+
+\section{Introduction}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Trade and Distribution}
+
+\begin{itemize}
+    \item<1-> As noted previously, most of the time, international trade maximizes a country’s overall welfare, but has distributional effects within it.
+    \item<2-> Distributional effects will create a demand for trade protection by some political constituency.
+    \item<3-> Two ways that we can approach this.  First one is this paper by Mayer, who looks at determinants of the preferences of a median vote in society.  Economics is largely Heckscher-Ohlin.
+    \item<4-> The other way is to look at protection as the outcome of competition between organized interest groups.  This is the approach of Grossman and Helpman (1994).  The economics is largely specific-factors based.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Previous Literature}
+
+\begin{itemize}
+    \item<1->  Early models in this area were done by Baldwin (1976, 1982), Brock and Magee (1978, 1980), and Findlay and Wellisz (1982).  ``Underlying premise of these studies is that political decisions on tariff rates are reflections of the selfish economic interests of voters, lobbying groups, politicians, or other decision makers in trade policy matters.”
+    \item<2->  Baldwin in particular notes that, for a small country, zero tariffs are optimal if consumer preferences are homothetic, voters have perfect information, and income redistributions are costless.  If you relax any of these assumptions, tariff rates might be affected by politically powerful interest groups who stand to lose a lot from trade.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Mayer Contributions}
+    
+\begin{itemize}
+    \item<1-> Mayer paper attempts to link the variation in tariff rates to factor-ownership distribution, voter eligibility, and participation rules.
+    \item<2-> Unlike previous papers (e.g. Baldwin), voters are allowed to own more than one factor of production, although their shares will vary across voters.
+    \item<3-> If there is majority voting with and no voting costs, the ``optimal” tariff will generally be determined by the median voter’s factor ownership profile.
+    \item<4-> First take at the model uses a two-by-two Heckscher-Ohlin setup.  Second take uses a specific-factors multisector model.  Paper also looks at the configuration of factor-ownership distributions and voting rules that would result in free-trade.
+\end{itemize}
+
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Optimal Tariff Rates in a Heckscher-Ohlin Model}
+
+\subsection{Assumptions}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Optimal Tariff Rates in a Heckscher-Ohlin Model – Assumptions}
+
+\begin{itemize}
+    \item<1-> Small open economy in which capital and labor are employed to produce two commodities, $ X_{1} $ and  $ X_{2} $.  Each resident of the country possesses one unit of labor ($ L_{i} =  1 $) and some non-negative amount of capital ($ K_{i} \ge 0 $).
+    \item<2-> Other Heckscher-Ohlin assumptions apply – factors are mobile across industries, markets are competitive, constant returns to scale.  Preferences of a country’s inhabitants are assumed to be homothetic and identical, so that a redistribution of income does not affect aggregate demand if income remains constant.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Preferences}
+
+\begin{itemize}
+    \item<1-> Individual $ i $'s preferences are expressed by the indirect utility function:
+    \begin{equation}
+        U^{i}\left( p, y^{i} \right) \text{ where } i = 1,...,I
+        \label{eq:utility1}
+    \end{equation}
+    where $ p $ is the relative price of good $ 1 $ in terms of good $ 2 $, and income $ y^{i} $ is measured in terms of good $ 2 $.
+    \item<2-> There are three potential sources of income: wages, rents from capital, and redistributed tariff revenues:
+    \begin{equation}
+        y^{i} = w + rK^{i} + T^{i}
+        \label{eq:income1}
+    \end{equation}
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Factor Ownership}
+
+\begin{itemize}
+    \item<1-> Mayer assumes that tariff revenue is redistributed in proportion to income from factor ownership, that is:
+    \begin{equation}
+        T^{i} = \phi^{i} T
+        \label{eq:tariffi}
+    \end{equation}
+    where $ T $ is total tariff revenue and
+    \begin{equation}
+        \phi^{i} = \frac{w + rK^{i}}{wL + rK}
+        \label{eq:phii}
+    \end{equation}
+    \item<2-> Substituting (\ref{eq:tariffi}) and (\ref{eq:phii}) into (\ref{eq:income1}) gives us:
+    \begin{equation}
+        y^{i} = \phi^{i}\left( wL + rK + T \right) = \phi^{i} Y
+        \label{eq:income2}
+    \end{equation}
+    where $ Y $ is the economy's total income in terms of the second good.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Tariff Revenue}
+
+Without loss of generality, we assume that for relevant tariff rates, the country incompletely specializes in the production of good $ 2 $ and imports good $ 1 $.  Total tariff revenues are expressed as:
+\begin{equation*}
+    T = t \pi M
+\end{equation*}
+where $ t $ is the tariff rate, $ \pi $ is the world price, and $ M $ is the quantity imported of good $ 1 $.
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Optimal Tariff Rates for Individuals}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Optimal Tariff Rates for Individuals}
+
+\begin{itemize}
+    \item<1-> Because factor ownership differs among a country’s people, their welfare is not uniformly affected by a tariff increase.  Substituting (\ref{eq:income2}) into (\ref{eq:utility1}) gives us:
+    \begin{equation}
+        U^{i} = U^{i}\left( p, \phi^{i} Y \right)
+        \label{eq:utility2}
+    \end{equation}
+    \item<2-> Let $ p = \pi \left( 1 + t \right) $ and differentiate (\ref{eq:utility2}) with respect to $ t $:
+    \begin{equation}
+        \frac{\partial U^{i}}{\partial t} = \frac{\partial U^{i}}{\partial y^{i}} \times \left[ -\phi^{i} \pi D_{1} + \phi^{i} \frac{\partial Y}{\partial t} + Y \frac{\partial \phi^{i}}{\partial t} \right]
+        \label{eq:dUdt1}
+    \end{equation}
+    where $ D_{1} $ is the aggregate demand for good $ 1 $ (derived from Roy’s identity / envelope theorem).
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Aggregate Income}
+
+\begin{itemize}
+    \item<1-> The economy’s aggregate income is given by:
+    \begin{equation}
+        Y = wL + rK + T = pX_{1} + X_{2} + t \pi M
+        \label{eq:aggincome}
+    \end{equation}
+    \item<2-> If we differentiate (\ref{eq:aggincome}) by $ t $, we get:
+    \begin{equation}
+        \frac{\partial Y}{\partial t} = \pi D_{1} + t \pi \frac{\partial M}{\partial t}
+        \label{eq:dYdt}
+    \end{equation}
+    where $ \frac{\partial M}{\partial t} < 0 $.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Tariffs and Welfare}
+
+\begin{itemize}
+    \item<1-> Substituting (\ref{eq:dYdt}) back into (\ref{eq:dUdt1}) gets us:
+    \begin{equation}
+        \frac{\partial U^{i}}{\partial t} = \frac{\partial U^{i}}{\partial y^{i}} \times \left[ \phi^{i} t \pi \frac{\partial M}{\partial t} + Y \frac{\partial \phi^{i}}{\partial t} \right]
+        \label{eq:dUdt2}
+    \end{equation}
+    \item<2->There are two channels through which a tariff will affect individual welfare – the fall in tariff-weighted imports ( $ \phi^{i} t \pi \frac{\partial M}{\partial t} $), which is always negative, and the change in person $ i $'s income share ($ Y \frac{\partial \phi^{i}}{\partial t} $), which could be either positive or negative depending on that's person's factor endowment.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{``Optimal" Tariffs}
+
+\begin{itemize}
+    \item<1-> We can calculate person $ i $’s optimal tariff by setting $ \frac{\partial U^{i}}{\partial t} = 0 $:
+    \begin{equation}
+        t^{i^{*}} = - \left[ \frac{Y}{\frac{\partial M}{\partial t}} \right] \left[ \frac{\frac{\partial \phi^{i}}{\partial t}}{\phi^{i}} \right]
+        \label{eq:optimalti}
+    \end{equation}
+    \item<2-> $ \frac{\partial M}{\partial t} < 0 $, so the optimal tariff is positive if $ \frac{\partial \phi^{i}}{\partial t} > 0 $ (the tariff increases the person's income share), zero if $ \frac{\partial \phi^{i}}{\partial t} = 0 $, and negative if $ \frac{\partial \phi^{i}}{\partial t} < 0 $.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Tariffs and Factor Ownership}
+
+\begin{itemize}
+    \item<1-> Relationship between a tariff and a person’s income depends on factor endowments, parameterized by $ \phi^{i} $.
+    \item<2-> If we differentiate equation (\ref{eq:phii}) with respect to the tariff and apply the Heckscher-Ohlin model, we get:
+    \begin{equation}
+        \frac{\partial \phi^{i}}{\partial t} = \left[ \frac{wL}{\left( wL + rK \right)^{2} \left( 1 + t \right)} \right] \times \left[ \frac{r\left( k - k^{i} \right) \left( \hat{w} - \hat{r} \right)}{\hat{p}} \right]
+        \label{eq:dphidt}
+    \end{equation}
+    where $ k = K / L $ and $ k^{i} = K^{i} / L $.
+    \item<3-> The first term in brackets is positive.  From the Stolper-Samuelson theorem, we know that $ \frac{\left( \hat{w} - \hat{r} \right)}{\hat{p}} > 0 $ if the imported good is labor-intensive (and conversely if it is capital-intensive).
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Endowment Levels}
+
+\begin{itemize}
+    \item<1-> Equation (\ref{eq:dphidt}) tells us that a person’s income share will be affected depending on their relative endowment of capital.
+    \item<2-> If $ k > k^{i} $ (that is, person $ i $ has less than an average amount of capital), then a tariff on a labor intensive good will raise $ \phi^{i} $.
+    \item<3-> If $ k < k^{i} $ (that is, person $ i $ has more than an average amount of capital), then a tariff on a labor intensive good will lower $ \phi^{i} $.
+    \item<4-> The converse happens if the tariff is imposed on a capital-intensive good.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Optimal Tariff Rates in Summary}
+
+Three conclusions can be drawn about individually optimal tariff rates:
+
+\begin{enumerate}
+    \item<1-> The optimal import tariff is positive (negative) for people who are relatively well (poorly) endowed with the import good’s intensively used factor.
+    \item<2-> The greater the difference between individual and national endowment ratios, the greater the deviation of individually optimal tariff or subsidy rates from a free-trade policy.
+    \item<3-> The optimal tariff rate is zero for each person whose personal capital-labor ownership ratio equals the national capital-labor endowment ratio.
+\end{enumerate}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Tariff Determination Under Majority Voting}
+
+\subsection{Real Income Effects of Tariff Changes}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Real Income Effects of Tariff Changes}
+
+\begin{itemize}
+    \item<1-> In order to understand how different voting rules affect tariffs, we must first look more closely at the real income effects of tariff changes.
+    \item<2-> Measured in terms of good $ 2 $, the real income change of individual $ i $ resulting from the tariff increase is:
+    \begin{equation*}
+        B^{i}\left( k^{i}, t \right) = \frac{\partial U^{i}}{\partial t} / \frac{\partial U^{i}}{\partial y^{i}}
+    \end{equation*}
+    intuitively, how much the price of the good is changed by the tariff relative to how much income is changed by the tariff.
+    \item<3-> $ \frac{\partial B^{i}}{\partial k^{i}} > 0 $ if the imported good is capital intensive, and conversely if it is labor-intensive.
+\end{itemize} 
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\end{document}
