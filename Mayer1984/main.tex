@@ -312,4 +312,286 @@ Three conclusions can be drawn about individually optimal tariff rates:
 
 %-------------------------------------------------------------
 
+\begin{frame}{Capital Endowment and Preferred Tariffs}
+
+\begin{itemize}
+    \item<1-> To show that $ \frac{\partial B^{i}}{\partial k^{i}} > 0 $ for a capital intensive good, first find an individual $ j $ such that their capital endowment $ k^{j} $ would make the prevailing tariff rate would be optimal.
+    \item<2-> That is, from equations (\ref{eq:optimalti}) and (\ref{eq:dphidt}):
+    \begin{equation}
+        t = -\left[ \frac{\gamma}{\pi\frac{\partial m}{\partial t}} \right] \left[ \frac{wL \left( \hat{w} - \hat{r} \right)}{\left( wL + rK \right) \hat{p} \left( 1 + t \right)}  \right] \left[ \frac{r \left( k - k^{j} \right)}{w + rk^{j}} \right]
+        \label{eq:tforkj}
+    \end{equation}
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Deriving $ B^{i} $}
+
+\begin{itemize}
+    \item<1-> Using equation (\ref{eq:dUdt1}) we can rewrite $ B^{i} $ as:
+    \begin{equation*}
+        B^{i}\left( k^{i}, t \right) = \phi^{i} \left[ t \pi \frac{\partial M}{\partial t} +  Y \frac{\partial \phi^{i}}{\partial t} / \phi^{i} \right]
+    \end{equation*}
+    \item<2-> Substituting (\ref{eq:tforkj}) for $ t $ and (\ref{eq:dphidt}) for $ \frac{\partial \phi^{i}}{\partial t} $, $ B^{i} $ becomes:
+    \begin{equation}
+        B^{i} = -\left[ \frac{\hat{w} - \hat{r}}{\hat{p}\left( 1 + t \right)} \right] \left[ \frac{Ywr}{\left( w + r\tilde{k}^{j} \right) \left( wL + rK \right)} \right]\left[ k^{i} - \tilde{k}^{j} \right]
+        \label{eq:Birevised}
+    \end{equation}
+    where $ -\frac{\hat{w} - \hat{r}}{\hat{p}} > 0 $ for a capital-intensive import good.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{$ B^{i} $ and Capital Endowment}
+
+\begin{itemize}
+    \item<1-> Equation (\ref{eq:Birevised}) tells us that a given tariff raises (lowers) the $ i $th person’s real income if the $ i $th person’s capital-labor ratio exceeds (falls short of) the capital-labor endowment ratio $ \tilde{k}^{j} $ of the person for whom the tariff is optimal.
+    \item<2-> Note that $ \frac{\partial B^{i}}{\partial k^{i}} > 0 $ if the first term is negative (the import good is capital-intensive).
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Figure 1}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.95]{MayerFig1.jpg}
+    \label{fig:Fig1}
+\end{figure}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Figure 1 and Preferences}
+
+\begin{itemize}
+    \item<1-> Figure 1 depicts an economy whose import competing industry is capital-intensive.
+    \item<2-> Line $ B_{0} B_{0} $ represents the change in welfare from a tariff at free trade.
+    \item<3-> $ B_{1} B_{1} $ represents the same for a positive tariff $ t $ for whom it is person $ j $’s optimal tariff. 
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Majority Voting Without Restrictions}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Majority Voting Without Restrictions}
+
+\begin{itemize}
+    \item<1-> Black (1948) shows that, in the absence of voting costs and voters having ``single-peaked” preferences, there is an equilibrium policy choice determined by the median voter’s optimal choice.
+    \item<2-> The median voter’s optimal tariff  $ \tilde{t}^{m} $  will depend on voting eligibility rules and the distribution of capital ownership.
+    \item<3-> Create a capital ownership index $ 0 \le e \le 1 $, where voters with no capital have a value of zero, and the voter(s) with the most capital have a value of $ 1 $.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Distribution of Capital Ownership}
+
+\begin{itemize}
+    \item<1-> The proportion of voters with a given level of capital ownership can be described with a density function $ f\left[ k\left( e \right) \right] $ and:
+    \begin{equation*}
+        \int_{0}^{1} k\left( e \right) f\left[ k \left(e \right) \right] de = \frac{K}{L} = k
+    \end{equation*}
+    is the whole economy’s capital-labor ratio.
+    \item<2-> If the distribution of $ k\left( e \right) $ has a rightward skew (that is, the median is less than the average, which is the case in all countries for which we have data), then an import subsidy (tariff) will be favored if the imported good is capital (labor) intensive.
+    \item<3->  This ``bias” in favor of labor only holds if there are no voter eligibility and participation restrictions that prevent people with little capital from voting.  
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Majority Voting Under Restrictions}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Majority Voting Under Restrictions}
+
+\begin{itemize}
+    \item<1-> Because voting may be a costly activity (see Downs (1957), Buchanan and Tullock (1962), Baldwin (1976), Peltzman (1976)), some eligible voters may choose not to exercise voting rights.
+    \item<2-> Following Peltzman (1976), paper assume that the probability of a person with a given level of capital voting is directly related to the net “gains” from voting.  For a given endowment level $ e $, a voter will enjoy a net gain from voting if:
+    \begin{equation*}
+        B\left[ k\left( e \right), t \right] - c\left( e \right) > 0
+    \end{equation*}
+    \item<3-> The fraction of people with $ k \left( e \right) $ that will vote in favor of a tariff increase is: 
+    \begin{equation*}
+        \rho\left( e \right) = \rho\left\{ B\left[ k\left( e \right), t \right] - c\left( e \right) \right\}
+    \end{equation*}
+    where $ 0 \le \rho \le 1 $ and $ \rho'\left( e \right) \ge 0 $.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Votes for Higher Tariff}
+
+\begin{itemize}
+    \item<1-> The total number of votes for a tariff increase, $ E $, will be:
+    \begin{equation*}
+        E = L \int_{\tilde{e}}^{1} \rho\left( e \right) f\left[ k\left( e \right) \right] de
+    \end{equation*}
+    where $ \tilde{e} $ is the index for the voter(s) with no net gains from the tariff, or $ B\left[ k\left( \tilde{e} \right), t \right] = c\left( \tilde{e} \right) $.
+    \item<2-> Similarly, a person will experience a net gain from voting for a tariff decrease if:
+    \begin{equation*}
+        D\left[ k\left( e \right), t \right] - c\left( e \right) = -B\left[ k\left( e \right), t \right] - c\left( e \right) > 0
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Votes for Lower Tariff}
+
+\begin{itemize}
+    \item<1-> The total number of votes cast for a tariff decrease, $ A $, will be equal to:
+    \begin{equation*}
+        A = L \int_{0}^{\tilde{e}} \sigma\left( e \right) f\left[ k\left( e \right) \right] de
+    \end{equation*}
+    where $ 0 \le \sigma \le 1 $ is the probability of a voter with a given endowment of voting for a tariff decrease.
+    \item<2-> At any given tariff rate, if $ E > A $, then a majority will vote in favor of higher tariffs, and in favor of lower tariffs if $ E < A $.  Therefore a political equilibrium exists where $ E = A $, or:
+    \begin{equation*}
+        \int_{\tilde{e}}^{1} \rho\left( e \right) f\left[ k\left( e \right) \right] de = \int_{0}^{\tilde{e}} \sigma\left( e \right) f\left[ k\left( e \right) \right] de
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Political Equilibrium Tariff}
+
+\begin{itemize}
+    \item<1->  It is clear that, if voting costs are positive, then the equilibrium tariff rate $ t^{*} $ is less than the optimal tariff rate of the marginal gainer from a tariff increase, $ \tilde{t} \left(  \tilde{e} \right) $ and greater than the optimal tariff of the marginal gainer from a tariff decrease, $ \tilde{t}\left( \tilde{e} \right) $.
+    \item<2-> The equilibrium tariff has the interesting property that it is not the optimal tariff of any voter in equilibrium.
+    \item<3-> Free trade would be adopted under this situation if factor-ownership distribution, voting costs, and voting probabilities were symmetric.
+\end{itemize}
+
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Different Voting Rules}
+
+\begin{itemize}
+    \item<1-> Different hypotheses can be developed for different types of voting rules.  Even in modern democracies, some people are restricted from voting based on age, residency, and citizenship rules.  Different people might also have different opportunity costs to their time and/or different information costs.
+    \item<2-> In the past, it was common to base voter eligibility on property ownership, taxpayer status, race, and gender.  The net effect of these rules tended to exclude ``capital poor” people from voting.  These rules would obviously change the median voter in a more capital-friendly direction.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Protection of Industry-Specific Interests}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Protection of Industry-Specific Interests}
+
+Mayer also derives a model that is more specific-factors based.  However, I think that Grossman and Helpman (1994) does this better, so we’ll save that for next time.
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Empirical Tests}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Empirical Tests}
+
+\begin{itemize}
+    \item<1-> Dutt and Mitra (2000, 2002) perform empirical tests on the Mayer model.
+    \item<2-> With some manipulation, the optimal tariff under costless majority voting can be written as: \begin{equation*}
+        t = \left( 1- k^{m} \right) \frac{dr}{dp} \frac{K}{m'\left( p \right)}
+    \end{equation*}
+    where $ k^{m} $ is the capital-labor ownership ratio of the median voter, relative to the country as a whole.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Regression Specification}
+
+\begin{itemize}
+    \item<1-> $ k^{m} < 1 $ for all countries for which we have data.  If we use $ \left( 1 - k^{m} \right) $ as a measure of inequality, then it is clear that the magnitude of $ t $ should be increasing in the level of inequality.
+    \item<2-> Dutt and Mitra (2000) run the following regression:
+    \begin{equation*}
+        TR^{i} = \alpha_{0} + \alpha_{1} INEQ^{i} + \alpha_{2} INEQ^{i} \left( \frac{K}{L} \right)^{i} + \alpha_{3} \left( \frac{K}{L} \right)^{i} + X^{i}\beta + \varepsilon_{i}
+    \end{equation*}
+    where $ TR^{i} $ is a measure of a country's trade restrictiveness (see Hauk (2012) for a primer on Trade Restrictiveness Indexes), $ INEQ^{i} $ is a measure of inequality in a country, and $ \left( \frac{K}{L} \right)^{i}$ is the capital-labor ratio in country $ i $.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Empirical Hypotheses}
+
+\begin{itemize}
+    \item<1-> Note that:
+    \begin{equation*}
+        \frac{\partial TR^{i}}{\partial INEQ^{i}} = \alpha_{1} + \alpha_{2} \left( \frac{K}{L} \right)^{i}
+    \end{equation*}
+    \item<2-> They hypothesize that $ \alpha_{1} > 0 $ (that is, trade restrictiveness is increasing in inequality) and $ \alpha_{2} < 0 $ (that is, until the capital-labor ratio becomes high, the country becomes capital-abundant, and it presumably starts exporting capital-intensive goods).
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Empirical Results}
+
+When they run their regressions, they find that, not only are the signs on their estimated coefficients correct but that:
+\begin{equation*}
+    \frac{\partial TR^{i}}{\partial INEQ^{i}} = 0 \Leftrightarrow -\frac{\alpha_{1}}{\alpha_{2}} = \left( \frac{K}{L} \right)^{i}
+\end{equation*}
+is approximately true in South Korea, which is the median country in their sample (i.e. roughly an equal number of countries are capital-abundant and labor-abundant).
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Conclusions}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Conclusions}
+
+\begin{itemize}
+    \item<1-> Paper argues that a country’s tariff policies are determined in a political equilibrium that is determined by the distribution of factor ownership.
+    \item<2-> A person’s ``optimal” tariff depends on a link between their personal capital-labor ratio and the capital-labor ratio of the country as a whole.  Workers with little capital prefer tariffs on labor-intensive goods and subsidies for capital-intensive goods and vice-versa for people who own a lot of capital.
+    \item<3-> There is then a political link between voter eligibility rules and costs in determining the median voter.  The preferences of the median voter, whoever he/she is, can be expected to prevail in majority voting.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Conclusions \#2}
+
+\begin{itemize}
+    \item<1-> Because we can expect that, in the presence of universal suffrage and low voting costs, that the median voter will be labor-abundant relative to the national average, there will be a pro-labor bias in protection.
+    \item<2-> Dutt and Mitra test this hypothesis and find that trade protection is rising in inequality in labor-abundant countries and decreasing in capital-abundant countries.
+    \item<3-> Economics of the model is largely Heckscher-Ohlin.  Grossman and Helpman (1994) will expand this in a more specific-factors direction.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
 \end{document}
