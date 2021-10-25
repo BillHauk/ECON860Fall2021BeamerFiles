@@ -1,0 +1,565 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+%\usepackage[authordate,backend=biber,natbib]{biblatex-chicago}
+%\usepackage{booktabs}
+%\addbibresource{growthreferences.bib}
+
+%\usepackage{utopia} %font utopia imported
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title[Grossman and Helpman (1994)] %optional
+{Protection for Sale}
+
+\subtitle{Gene Grossman and Elhanan Helpman, \emph{American Economic Review}, 1994}
+
+\author [Hauk] % (optional)
+{William~R.~Hauk,~Jr.} %\inst{1} %\and J.~Doe\inst{2}} 
+
+\institute[UofSC] % (optional)
+{
+  %\inst{1}%
+  Darla Moore School of Business\\
+  University of South Carolina
+  %\and
+  %\inst{2}%
+  %Faculty of Chemistry\\
+  %Very Famous University
+}
+
+\date[ECON 860, Fall 2021] % (optional)
+{ECON 860 -- International Trade Theory\\Fall 2021}
+
+\logo{\includegraphics[height=1cm]{UofSC_Monogram_Stack_CMYK_G.jpg}}
+
+%End of title page configuration block
+
+%---------------------------------------------------------
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+%------------------------------------------------------------
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+
+%-------------------------------------------------------------
+
+\section{Introduction}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Motivation}
+
+\begin{itemize}
+    \item<1-> Lobbying by organized interest groups play a large role in setting public policy.
+    \item<2-> This is particularly obvious in international trade policy, where there is a general consensus that free trade will maximize national welfare under most conditions.
+    \item<3-> However, the distributional effects of trade will give organized industry groups an incentive to lobby for trade protection.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Outline}
+
+\begin{itemize}
+    \item<1-> Paper based around a specific-factors model of trade.  People in import-competing industries have a specific factor of production that they earn rents from.
+    \item<2->  Some industries successfully organize and lobby the government for trade protection – offer contributions to government officials based on level of protection delivered.
+    \item<3-> Government values both contributions from lobbyists and national welfare.  Maximizes its own utility function based on offers from lobbying groups.
+    \item<4-> Groups that are organized and lobbying get protection from international trade, those that are not get import subsidies.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Existing Literature}
+
+\begin{itemize}
+    \item<1-> Previous literature in this area can be divided into two different strands.
+    \item<2-> First strand, exemplified by Magee et al (1989) and Hillman and Ursprung (1988) derive trade policy as the outcome of competition of two political parties.  Mayer (1984) is in a similar spirit, though the voting is more of a referendum.
+    \item<3-> Second strand, exemplified by Stigler (1971) and Hillman (1982) is to see trade policy as designed to maximize a political support function.  Grossman and Helpman (1994) is more in this strand.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Paper's Contributions}
+
+\begin{itemize}
+    \item<1-> Government’s political support function is endogenous – lobbyists offer support to the government based on benefit that the interest groups that they represent get from trade policy.
+    \item<2-> Different political-economic situations will lead to different political support functions that will, in turn, affect government trade policy.
+    \item<3-> Lobbies in the model represent different industries.  Lobbies offer prospective contributions to the government based on the trade policies that the government delivers.  Based on the incentives created by these contributions, the government chooses a vector of tariffs and/or subsidies and implements them.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Overview}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Economics of the Model}
+
+\begin{itemize}
+    \item<1-> Model assumes a small open economy that faces exogenously-given world prices for goods.  Free-trade would be the economically efficient policy
+    \item<2-> The economy produces $ n + 1 $ goods.  One is a numeraire good made with one unit of labor.  The other $ n $ goods that the economy produces are made with a combination of labor and a specific factor of production.
+    \item<3-> Some of these industries are able to form effective lobby groups (the process in this model is exogenous) which then offer support to the government in return for trade protection.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Industry Lobbies and PACs}
+
+\begin{itemize}
+    \item<1-> Grossman and Helpman argue that these assumptions fit the U.S. relatively well.
+    \item<2-> Political Action Committees (PACs) gave over three-quarters of their contributions to incumbent candidates during the 1988 election cycle (my impression is that this has increased in the intervening years as fewer Congressional elections become competitive).
+    \item<3-> 62\% of PAC contributions were made before a Congressional candidate even had a challenger identified.
+    \item<4-> It is thus reasonable to assume that PAC contributions are a means to influence incumbents.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Basic Game Form}
+
+\begin{itemize}
+    \item<1-> Each organized interest group representing one industry with a specific factor presents the government with a contribution schedule.
+    \item<2-> Contribution schedule maps each policy vector that the government might choose into a contribution level.
+    \item<3-> Contribution schedules form a Nash Equilibrium in the form of a Bernheim-Whinston (1986) menu-auction game.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Formal Framework}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Formal Framework}
+
+\begin{itemize}
+    \item<1-> Each individual maximizes the utility function:
+    \begin{equation*}
+        U = x_{0} + \sum_{i = 1}^{n} u_{i}\left( x_{i} \right)
+    \end{equation*}
+    where $ u_{i}\left( x_{i} \right) $ is differentiable, increasing, and strictly concave, and good $ 0 $ is a numeraire good with a world and domestic price equal to $ 1 $.
+    \item<2-> $ p_{i}^{*} $ is the exogenous world price of good $ i $.
+    \item<3-> $ p_{i} = p_{i}^{*} + t_{i} $ is the domestic price of the good.
+    \item<4-> $ x_{i} = d_{i}\left( p_{i} \right) $ is the demand for each good as a function of the domestic price.
+    \item<5-> $ x_{0} = E - \sum_{i = 1}^{n} p_{i} d_{i}\left( p_{i} \right) $ is the demand for the numeraire good as a function of domestic prices.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Indirect Utility}
+
+\begin{itemize}
+    \item<1-> This setup gives us an indirect utility function of:
+    \begin{equation*}
+        V\left( \mathbf{p}, E \right) = E + s\left( \mathbf{p} \right)
+    \end{equation*}
+    where $ s\left( \mathbf{p} \right) = \sum_{i = 1}^{n} u_{i}\left[ d_{i}\left( p_{i} \right) \right] - p_{i} d_{i}\left( p_{i} \right) $.
+    \item<2-> Assume that the numeraire good is produced with labor alone and that one unit of labor produces one good.  In a competitive equilibrium, then, the wage rate is $ 1 $.
+    \item<3-> Since the wage rate is fixed at one, the rents earned by specific factors producing good $ i $ depends solely upon the domestic price of the good, which is indicated by $ \pi_{i}\left( p_{i} \right) $.
+    \item<4-> Roy’s identity tell us that $ y_{i}\left( p_{i} \right) = \pi_{i}'\left( p_{i} \right) $.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Tariff Revenue}
+
+\begin{itemize}
+    \item<1-> The per-capita revenue that the government gets from tariff barriers is:
+    \begin{equation*}
+        r\left( \mathbf{p} \right) = \sum_{i = 1}^{n} \left( p_{i} - p_{i}^{*} \right) \left[ d_{i}\left( p_{i} \right) - \frac{1}{N} y_{i}\left( p_{i} \right) \right]
+    \end{equation*}
+    where $ N $ is the size of the electorate.
+    \item<2-> As with Mayer (1984), assume that the government returns this revenue as a lump-sum payment to each individual.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Lobbying Groups}
+
+\begin{itemize}
+    \item<1-> Assume that some industries are organized into lobbying groups, each of which promises to contribute resources to the government in the form of a contribution schedule $ C_{i}\left( \mathbf{p} \right) $.
+    \item<2-> The welfare of each industry is $ V_{i} = W_{i} - C_{i} $, where:
+    \begin{equation*}
+        W_{i}\left( \mathbf{p} \right) = l_{i} + \pi_{i}\left( p_{i} \right) +\alpha_{i} N \left[ r\left( \mathbf{p} \right) + s\left( \mathbf{p} \right) \right]
+    \end{equation*}
+    and $ l_{i} $ is the total labor supply and income in industry $ i $ and $ \alpha_{i} $ is the fraction of the electorate that owns part of the specific factor used in $ i $.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Government}
+
+\begin{itemize}
+    \item<1-> The government chooses to maximize the objective function:
+    \begin{equation*}
+        G = \sum_{i = 1}^{N} C_{i}\left( \mathbf{p} \right) + a W\left( \mathbf{p} \right)
+    \end{equation*}
+    where $ W\left( \mathbf{p} \right) $ represents gross societal welfare, $ L $ is the set of industries with a lobbying group, and $ a $ is a non-negative constant representing the trade-off between societal welfare and political contributions.
+    \item<2-> $ W\left( \mathbf{p} \right) $ can be written as:
+    \begin{equation*}
+        W\left( \mathbf{p} \right) = l + \sum_{i = 1}^{N} \pi_{i}\left( p_{i} \right) + N\left[ r\left( \mathbf{p} \right) + s\left( \mathbf{p} \right) \right]
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{The Structure of Protection}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Equilibrium Characterization}
+
+The equilibrium contribution schedule offered by the industry lobbies has the form of a Bernheim and Whinston (1986) menu auction equilibrium.
+\begin{theorem}
+    $ \left( \left\{ C_{i}^{0} \right\}_{i \in L}, \mathbf{p^{0}} \right) $ is a subgame perfect Nash equilibrium of the trade-policy game if and only if:
+    \begin{enumerate}
+        \item $ C_{i}^{0} $ is feasible for all $ i \in L $.
+        \item $ \mathbf{p^{0}} $ maximizes $ \sum_{i \in L} C_{i}^{0}\left( \mathbf{p} \right) + a W\left( \mathbf{p} \right) $ over the feasible policy space (i.e. government's welfare function is maximized).
+        \item $ \mathbf{p^{0}} $ maximizes $ W_{j}\left( \mathbf{p} \right) - C_{j}^{0}\left( \mathbf{p} \right) + \sum_{i \in L} C_{i}^{0}\left( \mathbf{p} \right) + a W\left( \mathbf{p} \right) $ for each lobby $ j \in L $ (see note below).
+        \item for every $ j \in L $, there exists a $ \mathbf{p^{j}} $ in the feasible policy set that maximizes $ \sum_{i \in L} C_{i}^{0}\left( \mathbf{p} \right) + a W\left( \mathbf{p} \right) $ such that $ C_{i}^{0}\left( \mathbf{p} \right) = 0 $.
+    \end{enumerate}
+\end{theorem}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Equilibrium Explanation}
+
+\begin{itemize}
+    \item<1-> The first condition is straightforward (contributions must be non-negative and must not exceed the income of the lobby group).
+    \item<2-> The second states that the government sets trade policy to maximize its welfare given the contribution schedules offered by the lobby groups.
+    \item<3-> The third condition states that for each lobby $ j $, the equilibrium price vector must maximize the joint welfare of the lobby and the government, given the contribution schedules of the other lobbies.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Condition 3}
+
+\begin{itemize}
+    \item<1-> Suppose that Condition 3 were not true.  Then lobby $ j $ would have an incentive to redesign the contribution schedule and give the government a contribution that would just barely induce it to choose the jointly optimal price vector (i.e., make $ \sum_{i \in L} C_{i}^{0}\left( \mathbf{p} \right) + a W\left( \mathbf{p} \right) $ slightly bigger), and pocket the rest of the remaining surplus for itself.
+    \item<2-> Condition 3 implies that a first order condition is satisfied at $ \mathbf{p^{0}} $, that is:
+    \begin{equation}
+        \nabla W_{j}\left( \mathbf{p^{0}} \right) - \nabla C_{j}^{0}\left( \mathbf{p^{0}} \right) + \sum_{i \in L} \nabla C_{i}^{0}\left( \mathbf{p^{0}} \right) + a \nabla W\left( \mathbf{p^{0}} \right) = \mathbf{0}
+        \label{eq:Condition3}
+    \end{equation}
+    for all $ j \in L $.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Local Truthfulness}
+
+\begin{itemize}
+    \item<1-> At the same time, condition 2 implies that:
+    \begin{equation}
+        \sum_{i \in L} \nabla C_{i}^{0}\left( \mathbf{p^{0}} \right) + a \nabla W\left( \mathbf{p^{0}} \right) = \mathbf{0}
+        \label{eq:Condition2}
+    \end{equation}
+    \item<2-> Combining equations (\ref{eq:Condition3}) and (\ref{eq:Condition2}) gives us:
+    \begin{equation*}
+        \nabla C_{i}^{0}\left( \mathbf{p^{0}} \right) = \nabla W_{i}\left( \mathbf{p^{0}} \right)
+    \end{equation*}
+    that is, the contribution schedules are truthfully revealing of the lobbies’ preferences in the neighborhood of the equilibrium policy.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Global Truthfulness?}
+
+\begin{itemize}
+    \item<1-> There are several possible contribution schedules that fit this criterion of local truthfulness, of which a globally truthful equilibrium is only one.
+    \item<2-> Bernheim and Whinston have shown that there is no cost from playing a globally truthful strategy, so it seems reasonable to assume that these are focal points among potential Nash equilibria.
+    \item<3-> Assume, for instance, a trembling-hand situation where at least one lobby does not play its optimal contribution schedule, such that $ \mathbf{p^{'}} \neq \mathbf{p^{0}} $ satisfies condition 2.
+    \item<4-> If $ \mathbf{p^{'}} $ were known beforehand, the other lobbies could adjust and set their contribution schedules such that $ \nabla C_{i}^{0}\left( \mathbf{p^{'}} \right) = \nabla W_{i}\left( \mathbf{p^{'}} \right) $ (i.e. local truthfulness around the new equilibrium).
+    \item<5-> However, since the nature of a trembling hand perfect equilibrium is such that $ \mathbf{p^{'}} $ cannot be known ahead of time, the only trembling hand perfect equilibrium strategy must be such that $ \nabla C_{i}^{0}\left( \mathbf{p^{0}} \right) = \nabla W_{i}\left( \mathbf{p^{0}} \right) $ for all feasible $ \mathbf{p} $ (i.e. global truthfulness).
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Equilibrium Policies}
+
+\begin{itemize}
+    \item<1-> If truthful strategies are used, then we have by definition that $ C_{j}^{0}\left( \mathbf{p} \right) = W_{j}\left( \mathbf{p} \right) - B_{j}^{0} $, where $ B_{j}^{0} $ is the net (non-negative) benefit that lobby $ j $ gets in equilibrium from its lobbying efforts.
+    \item<2-> Condition 2 implies that $ \sum_{i \in L} C_{i}^{0}\left( \mathbf{p^{0}} \right) + a W\left( \mathbf{p^{0}} \right) \ge \sum_{i \in L} C_{i}^{0}\left( \mathbf{p} \right) + a W\left( \mathbf{p} \right) $ for all feasible $ \mathbf{p} $.
+    \item<3-> If $ C_{i}\left( \mathbf{p} \right) \ge W_{i}\left( \mathbf{p} \right) - B_{i}^{0} $ for all $ i \in L $ and all feasible $ \mathbf{p} $, then:
+    \begin{equation*}
+        \sum_{i \in L}\left( W_{i}\left( \mathbf{p^{0}} \right) - B_{i}^{0} \right) + a W\left( \mathbf{p^{0}} \right) \ge \sum_{i \in L}\left( W_{i}\left( \mathbf{p} \right) - B_{i}^{0} \right) + a W\left( \mathbf{p} \right)
+    \end{equation*}
+    which, in turn, implies:
+    \begin{equation}
+        \sum_{i \in L} W_{i}\left( \mathbf{p^{0}} \right) + a W\left( \mathbf{p^{0}} \right) \ge \sum_{i \in L} W_{i}\left( \mathbf{p} \right) + a W\left( \mathbf{p} \right)
+        \label{eq:weightedmax}
+    \end{equation}
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Weighted Maximization Problem}
+
+\begin{itemize}
+    \item<1-> Expression (\ref{eq:weightedmax}) is equivalent to stating that:
+    \begin{equation}
+        \mathbf{p^{0}} = \operatorname{argmax} \left[ \sum_{i \in L} W_{i}\left( \mathbf{p} \right) + a W\left( \mathbf{p} \right) \right]
+        \label{eq:weightedmax2}
+    \end{equation}
+    \item<2-> In words, the government is maximizing an objective function in equilibrium that puts a weight of $ 1 + a $ on the welfare of industries that have lobbying groups and $ a $ on the welfare of industries that do not have lobbying groups.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Effect of Policy Changes on Industry Welfare}
+
+\begin{itemize}
+    \item<1-> If the equilibrium contribution schedule is differentiable and locally truthful, then the equilibrium policy will be $ \mathbf{p^{0}} $ such that:
+    \begin{equation*}
+        \sum_{i \in L} \nabla W_{i}\left( \mathbf{p^{0}} \right) + a \nabla W\left( \mathbf{p^{0}} \right) = \mathbf{0}
+    \end{equation*}
+    \item<2-> Look first at an industry $ i $ where $ i $ has an organized lobbying group:
+    \begin{equation}
+        \frac{\partial W_{i}\left( \mathbf{p} \right)}{\partial p_{j}} = \left( \delta_{i,j} - \alpha_{i} \right) y_{j}\left( p_{j} \right) + \alpha_{i}\left( p_{j} - p_{j}^{*} \right) m_{j}^{'}\left( p_{j} \right)
+        \label{eq:dWidpj}
+    \end{equation}
+    where $ \delta_{i,j} = 1 $ if $ i = j $ and zero otherwise, and $ m_{j}\left( p_{j} \right) = N d_{j}\left( p_{j} \right) - y_{j}\left( p_{j} \right) $.
+    \item<3-> The first term is an decrease in net surplus from the price increase (or an increase in surplus if $ i = j $), The second term is a change in the amount of tariff revenue collected due to fluctuations in imports. 
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Effect of Policy Changes on Welfare for Organized Industries}
+
+\begin{itemize}
+    \item<1-> If we sum equation (\ref{eq:dWidpj}) across all $ i \in L $ we get:
+    \begin{equation}
+        \sum_{i \in L} \frac{\partial W_{i}\left( \mathbf{p} \right)}{\partial p_{j}} = \left( I_{j} - \alpha_{L} \right) y_{j}\left( p_{j} \right) + \alpha_{L}\left( p_{j} - p_{j}^{*} \right) m_{j}^{'}\left( p_{j} \right)
+        \label{eq:dWidpjall}
+    \end{equation}
+    where $ I_{j} $ is an indicator variable indicating whether or not industry $ j $ has an organized lobby, and $ \alpha_{L} = \sum_{i \in L} \alpha_{i} $ is the fraction of the population who belongs to an industry represented by an organized lobby.
+    \item<2-> Equation (\ref{eq:dWidpjall}) tells us that, starting from free-trade prices, industries with a lobby benefit from a small increase in prices due to a tariff on their own good, and get harmed by an increase in the prices of other goods.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Effect of Policy Changes on Aggregate Welfare}
+
+\begin{itemize}
+    \item<1-> If we take the derivative of national welfare with respect to a tariff-induced price change, we get:
+    \begin{equation}
+        \frac{\partial W}{\partial p_{j}} = \left( p_{j} - p_{j}^{*} \right) m_{j}^{'}\left( p_{j} \right)
+        \label{eq:dWdpj}
+    \end{equation}
+    \item<2-> It is clear in equation (\ref{eq:dWdpj}) that national welfare is maximized at free trade (i.e. when $ p_{j} = p_{j}^{*} $).
+    \item<3-> Combining equations (\ref{eq:dWidpjall}) and (\ref{eq:dWdpj}), we can find the equilibrium price for $ p_{j} $ by setting:
+    \begin{equation}
+        \left( I_{j} - \alpha_{L} \right) y_{j}\left( p_{j} \right) + \alpha_{L}\left( p_{j} - p_{j}^{*} \right) m_{j}^{'}\left( p_{j} \right) + a\left( p_{j} - p_{j}^{*} \right) m_{j}^{'}\left( p_{j} \right) = 0
+        \label{eq:derivative}
+    \end{equation}
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Equilibrium Tariffs}
+
+\begin{itemize}
+    \item<1-> With a little bit of algebra, we can derive the following from equation (\ref{eq:derivative}):
+    \begin{equation*}
+        \frac{p_{j} - p_{j}^{*}}{p_{j}} = \frac{\left( I_{j} - \alpha_{L} \right)}{\left( a + \alpha_{L} \right)} \frac{y_{j}\left( p_{j} \right) / m_{j}\left( p_{j} \right)}{-m_{j}^{'}\left( p_{j} \right) p_{j} / m_{j}\left( p_{j} \right)}
+    \end{equation*}
+    \item<2-> If we then define $ z_{j}\left( p_{j} \right) = \frac{y_{i}\left( p_{i} \right)}{m_{i}\left( p_{i} \right)} $ as the inverse of the import penetration ratio, $ e_{j}\left( p_{j} \right) = -\frac{m_{j}^{'}\left( p_{j} \right) p_{j}}{m_{j}\left( p_{j} \right)} $ as the elasticity of demand for imports, and $ \tau_{j} = \frac{p_{j} - p_{j}^{*}}{p_{j}^{*}} $ as the ad-valorem tariff, we can rewrite this equation as:
+    \begin{equation}
+        \frac{\tau_{j}}{1 + \tau_{j}} = \frac{\left( I_{j} - \alpha_{L} \right)}{\left( a + \alpha_{L} \right)} \frac{z_{j}}{e_{j}}
+        \label{eq:equilibriumtariffs}
+    \end{equation}
+    \item<3-> Note that $ z_{j}\left( p_{j} \right) $ and $ e_{j}\left( p_{j} \right) $ are endogenous variables, potentially affected by the initial price level.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Comparative Statics}
+
+\begin{itemize}
+    \item<1-> From equation (\ref{eq:equilibriumtariffs}), we can see that the equilibrium tariff for industry $ j $ will be positive if $ I_{j} = 1 $ and negative otherwise.
+    \item<2-> Free trade will generally result under three circumstances:
+    \begin{enumerate}
+        \item The weight on national welfare $ a $ approaches infinity.
+        \item  There are no organized lobbies so that $ \alpha_{L} = 0 $ and $ I_{j} = 0 $ for all $ j $.
+        \item All industries have organized lobbies, so that $ \alpha_{L} = 1 $ and $ I_{j} = 1 $ for all $ j $.
+    \end{enumerate}
+    \item<3-> A particular industry will have zero tariffs if $ e_{j} $ approaches infinity or $ z_{j} = 0 $. 
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Empirical Tests}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Empirical Tests}
+
+\begin{itemize}
+    \item<1-> Goldberg and Maggi (1999) perform an empirical test of the Grossman-Helpman model.  Starting with equation (\ref{eq:equilibriumtariffs}), they derive the following regression equation:
+    \begin{align*}
+       \frac{\tau_{j}}{1 + \tau_{j}} &= \frac{\left( I_{j} - \alpha_{L} \right)}{\left( a + \alpha_{L} \right)} \frac{z_{j}}{e_{j}} \\
+       \frac{\tau_{j}}{1 + \tau_{j}} e_{j} &= \frac{\left( I_{j} - \alpha_{L} \right)}{\left( a + \alpha_{L} \right)} z_{j} \\
+       \frac{\tau_{j}}{1 + \tau_{j}} e_{j} &= \frac{I_{j}}{\left( a + \alpha_{L} \right)} z_{j} - \frac{\alpha_{L}}{\left( a + \alpha_{L} \right)} z_{j} \\
+       \frac{\tau_{j}}{1 + \tau_{j}} e_{j} &= \beta_{0} + \beta_{1} \frac{y_{j}}{m_{j}} + \beta_{2} I_{j} \frac{y_{j}}{m_{j}} + \varepsilon_{j}
+    \end{align*}
+    \item<2-> The testable hypotheses generated by this regression specification are:
+    \begin{equation*}
+        \beta_{1} < 0 \text{,  } \beta_{2} > 0 \text{,  } \beta_{1} + \beta_{2} > 0
+    \end{equation*}
+\end{itemize}
+
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Goldberg-Maggi Results}
+
+\begin{itemize}
+    \item<1-> Goldberg and Maggi data come from import and production data from 107 industries at the 3-digit SIC level in 1983.
+    \item<2-> From Schiells, Deardorff and Stern (1986), they are able to find import elasticity ratios for the industries in question.
+    \item<3-> Since tariffs are not a major component of protection in the U.S., what they use as a proxy for tariff protection is the coverage ratios of NTBs in the sector in question.
+    \item<4-> From here, they run the regression and estimate the following coefficients:
+    \begin{equation*}
+        \beta_{1} = -0.0083 \text{ s.e. } \left( 0.0040 \right)
+    \end{equation*}
+    \begin{equation*}
+        \beta_{2} = 0.0106 \text{ s.e. } \left( 0.0053 \right)
+    \end{equation*}
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Goldberg-Maggi Hypothesis Testing}
+
+\begin{itemize}
+    \item<1-> From the estimated coefficients above, it appears that all three hypotheses are satisfied, though the third one only weakly.
+    \item<2-> The implied structural parameters from the model are:
+    \begin{equation*}
+        a = 93 \text{,  } \alpha_{L} = 0.883
+    \end{equation*}
+    that is, most industries are covered by a lobby group and that the U.S. government places a high weight on national welfare relative to those lobbying groups.
+    \item<3-> Both of these parameters seem rather high.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Gawande and Bandyopadhyay (2000) Extension}
+
+\begin{itemize}
+    \item<1-> Gawande and Bandyopadhyay (2000) extend the analysis by adding an intermediate good and estimating the following equation:
+    \begin{equation*}
+        \frac{\tau_{j}}{1 + \tau_{j}} e_{j} = \frac{I_{j}}{\left( a + \alpha_{L} + \alpha_{X} \right)} \frac{z_{j}}{e_{j}} - \frac{\alpha_{L}}{\left( a + \alpha_{L} + \alpha_{X} \right)} \frac{z_{j}}{e_{j}} + \frac{p_{X}}{e_{j} m_{j}} \frac{\partial m_{X}}{\partial p_{j}} \tau_{X}
+    \end{equation*}
+    \item<2-> In addition to the three hypotheses from Goldberg and Maggi, they also predict that protection in industry $ j $ will be increasing in tariffs on intermediate goods $ X $.
+    \item<3-> They also add some control variables for industry concentration and instrument for the endogenous variables.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Gawande and Bandyopadhyay Results}
+
+\begin{itemize}
+    \item<1->  Their implied value of a from their analysis is even larger than Goldberg and Maggi: $ a = 3175 $.
+    \item<2-> They also find that the tariff rate on intermediate goods influences the tariff rate on final goods.
+    \item<3-> Eicher and Osang (2002) also estimate the GH model, but dispense with the Truthful Nash Equilibrium assumption, and measure lobbying contributions directly.  They find much smaller estimates of $ a $ and $ \alpha_{L} $ depending on their specification.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Summary and Extensions}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Summary and Extensions}
+
+\begin{itemize}
+    \item<1-> Model treats contributions by lobbying groups as a means to influence governmental policy.
+    \item<2-> Lobbies make offers of political contributions as functions of a vector of trade policies, using a Bernheim-Whinston menu auction game to derive a Nash Equilibrium.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Possible Extensions}
+
+\begin{itemize}
+    \item<1-> Grossman and Helpman discuss two possible extensions to their paper.
+    \item<2-> First suggestion is modeling imported intermediate inputs, so that lobby groups have a stronger opinion about tariffs on certain goods.  Gawande and Bandyopadhyay do this to some extent.
+    \item<3-> Second extension is to incorporate policy interdependence among large trading economies.  Trade protection may have relevant terms of trade effects that can be resolved through negotiations.  Bagwell and Staiger (2002) moves in this direction.
+    \item<4-> One could also speculate on what could happen if there is more than one government agent to lobby.  Hauk (2011) [*cough*... shameless job market paper plug... *cough*] does this.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\end{document}
