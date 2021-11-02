@@ -301,4 +301,166 @@ The idea is that a necessary condition for any tariff pair $ \left( \tau^{0}, \t
 
 %-------------------------------------------------------------
 
+\begin{frame}{Politically Optimal Tariffs}
+
+Define politically optimal tariffs $ \left( \tau^{PO}, \tau^{PO*} \right) $ as the outcome of a reciprocal trade agreement that eliminates the terms of trade motivation from each government’s trade policy decisions and implements tariffs that jointly satisfy:
+\begin{align}
+    \frac{\partial W}{\partial p} &= 0 \label{eq:dWdp} \\
+    \frac{\partial W^{*}}{\partial p^{*}} &= 0 \label{eq:dW*dp*}
+\end{align}
+
+\begin{theorem}{Proposition \#3}
+    Politically optimal tariffs are efficient.
+\end{theorem}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Proof of Proposition \#3}
+
+\begin{proof}
+    Combining equations (\ref{eq:dWdp}) and (\ref{eq:dW*dp*}) with equations (\ref{eq:dtaudtau*home}) and (\ref{eq:dtaudtau*foreign}) we know that:
+    \begin{equation*}
+        \left[ \frac{\partial \tau}{\partial \tau^{*}} \right]_{dW = 0} = -\frac{\partial p^{w} / \partial \tau^{*}}{\partial p^{w} / \partial \tau} = \left[ \frac{\partial \tau}{\partial \tau^{*}} \right]_{dW^{*} = 0}
+    \end{equation*}
+    which means that these tariffs are efficient. \textbf{Q.E.D.}
+\end{proof}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Sufficiency and Necessity}
+
+\begin{itemize}
+    \item<1-> Proposition \#3 tells us that a politically optimal tariff structure is sufficient for efficiency.  It does not demonstrate necessity.
+    \item<2-> To demonstrate necessity, first define:
+    \begin{align}
+        A &= \frac{1 - \tau \lambda}{\left( \frac{\partial W}{\partial p} + \lambda \frac{\partial W}{\partial p^{w}} \right)} \label{eq:Ahome} \\
+        A^{*} &= \frac{1 - \lambda^{*} / \tau^{*}}{\left( \frac{\partial W^{*}}{\partial p^{*}} + \lambda^{*} \frac{\partial W^{*}}{\partial p^{w}} \right)} \label{eq:Aforeign}
+    \end{align}
+    and assume that both are not equal to zero (meaning that the partial derivatives for the welfare functions are always finite.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Efficient Locus}
+
+\begin{itemize}
+    \item<1-> Combining equations (\ref{eq:efficientlocus}), (\ref{eq:dtaudtau*home}), and (\ref{eq:dtaudtau*foreign}) together, along with the definition of the $ A $s on the previous slide, we can define the locus of efficient points as:
+    \begin{equation*}
+        \left( 1 - A \frac{\partial W}{\partial p} \right) \left( 1 - A^{*} \frac{\partial W^{*}}{\partial p^{*}} \right) = 1
+    \end{equation*}
+    \item<2-> Consider the subset of cases where countries are symmetric – $ W = W^{*} $, $ \lambda = \lambda^{*} $, and $ \tau = \tau^{*} $.  The condition above reduces to $ \left( 1 - A \frac{\partial W}{\partial P} \right)^{2} = 1 $.  Given that $ A \neq 0 $, this condition can only hold if $ \frac{\partial W}{\partial p} = 0 $.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Proposition \#4}
+
+\begin{theorem}{Proposition \#4}
+    The efficient symmetric reciprocal trade agreement between symmetric countries must implement the politically optimal tariffs. 
+\end{theorem}
+\begin{proof}
+    This result follows directly from the last line of the previous slide.  \textbf{Q.E.D.}
+\end{proof}
+\begin{itemize}
+    \item<1-> This result need not hold if the two countries are not symmetric – that is, the condition above can be satisfied even if $ \frac{\partial W}{\partial p} \neq 0 $ and $ \frac{\partial W^{*}}{\partial p^{*}} \neq 0 $.
+    \item<2-> Intuitively, this occurs because we assume that it isn’t possible to make efficient transfers between countries.  Therefore, an ``efficient" agreement may not maximize the overall size of the pie, as with a politically-optimal tariff.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Nash vs. Politically-Optimal Tariffs}
+
+\begin{itemize}
+    \item<1-> In the Nash Equilibrium, terms-of-trade considerations effects play a large role in setting government trade policy choices.
+    \item<2-> The cooperative equilibrium with reciprocal liberalization eliminates this trade policy ``externality."
+    \item<3-> Bagwell and Staiger conclude, ``Whether or not governments are politically motivated, the essence of a reciprocal trade agreement is to eliminate terms-of-trade considerations from trade policy choices."
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\subsection{Reciprocity}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Reciprocity}
+
+\begin{itemize}
+    \item<1-> To understand the role of reciprocity, observe that $ \lambda \frac{\partial W}{\partial p^{w}} $ and $ \lambda^{*} \frac{\partial W^{*}}{\partial p^{w}} $.  Therefore, at any Nash equilibrium tariffs satisfying equations (\ref{eq:homefoc}) and (\ref{eq:foreignfoc}), it must be the case that $ \frac{\partial W}{\partial p} < 0 $ and $ \frac{\partial W^{*}}{\partial p^{*}} > 0 $.
+    \item<2-> These inequalities imply that, if the terms of trade effects could be neutralized in a Nash Equilibrium, a slightly less restrictive trade policy would be beneficial in both countries.
+    \item<3-> These observations lead to Proposition \#5.
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Proposition \#5}
+
+\begin{theorem}{Proposition \#5}
+    Beginning at a Nash tariff equilibrium, reciprocal trade liberalization that leaves the terms of trade unchanged will increase each government’s welfare monotonically until this liberalization has proceeded to the point where $ \min\left[ -\frac{\partial W}{\partial p}, \frac{\partial W^{*}}{\partial p^{*}} \right] = 0 $.  If countries are symmetric, this liberalization path leads to the efficient symmetric reciprocal trade agreement.
+\end{theorem}
+
+\begin{proof}
+    Consider reciprocal reductions of $ \tau $ and $ \tau^{*} $ starting from Nash Equilibrium and moving along the iso terms-of-trade locus that passes through $ \left( \tau^{N}, \tau^{N*} \right) $. \\
+\end{proof}
+
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Proposition \#5, continued}
+
+\begin{proof}
+    \begin{itemize}
+        \item The impact of a small amount of trade liberalization along this path on home domestic government welfare is $ -\frac{\partial W}{\partial p} \frac{\partial p}{\partial \tau} d\tau $, and for the foreign government, $ -\frac{\partial W^{*}}{\partial p^{*}} \frac{\partial p^{*}}{\partial \tau^{*}} d\tau^{*} $.  Both of these are strictly positive in the neighborhood of the Nash Equilibrium.
+        \item Both continue to be positive as one moves down and to the left along the locus until $ \min\left[ -\frac{\partial W}{\partial p}, \frac{\partial W^{*}}{\partial p^{*}} \right] = 0 $.
+        \item If countries are symmetric, then both will reach $ \frac{\partial W}{\partial p} = \frac{\partial W^{*}}{\partial p^{*}} = 0 $ at the same point.  By equations (\ref{eq:dWdp}) and (\ref{eq:dW*dp*}), this defines a politically-optimal tariff.  \textbf{Q.E.D.}
+    \end{itemize}
+\end{proof}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\section{Conclusions}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Bagwell and Staiger Oeuvre}
+
+\begin{itemize}
+    \item Bagwell, Kyle, and Robert W. Staiger. ``Multilateral Tariff Cooperation During the Formation of Free Trade Areas." \emph{International Economic Review} (1997): 291-319.
+    \item Bagwell, Kyle, and Robert W. Staiger. ``Multilateral Tariff Cooperation During the Formation of Customs Unions." \emph{Journal of International Economics} 42, no. 1-2 (1997): 91-123.
+    \item Bagwell, Kyle, and Robert W. Staiger. ``An Economic Theory of GATT." \emph{American Economic Review} 89, no. 1 (1999): 215-248.
+    \item Bagwell, Kyle, and Robert W. Staiger. ``Domestic Policies, National Sovereignty, and International Economic Institutions." \emph{The Quarterly Journal of Economics} 116, no. 2 (2001): 519-562. 
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
+\begin{frame}{Bagwell and Staiger Oeuvre \#2}
+
+\begin{itemize}
+    \item Bagwell, Kyle, and Robert W. Staiger. ``Reciprocity, Non-Discrimination and Preferential Agreements in the Multilateral Trading System." \emph{European Journal of Political Economy} 17, no. 2 (2001): 281-325.
+    \item Bagwell, Kyle, and Robert W. Staiger. ``Multilateral Trade Negotiations, Bilateral Opportunism and the Rules of GATT/WTO." \emph{Journal of International Economics} 63, no. 1 (2004): 1-29.
+    \item Bagwell, Kyle, and Robert W. Staiger. \emph{The Economics of the World Trading System}. MIT press, 2004. 
+\end{itemize}
+    
+\end{frame}
+
+%-------------------------------------------------------------
+
 \end{document}
